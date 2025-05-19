@@ -3,8 +3,44 @@
   "WorkspaceRootPath": "D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{10B4EE09-A906-41C9-94A3-5980DD97E13B}|DXRTutorial\\DXRTutorial.vcxproj|D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTutorial\\DXRTutorial.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{10B4EE09-A906-41C9-94A3-5980DD97E13B}|DXRTutorial\\DXRTutorial.vcxproj|solutionrelative:DXRTutorial\\DXRTutorial.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{10B4EE09-A906-41C9-94A3-5980DD97E13B}|DXRTutorial\\DXRTutorial.vcxproj|D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTutorial\\Application.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{10B4EE09-A906-41C9-94A3-5980DD97E13B}|DXRTutorial\\DXRTutorial.vcxproj|solutionrelative:DXRTutorial\\Application.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10B4EE09-A906-41C9-94A3-5980DD97E13B}|DXRTutorial\\DXRTutorial.vcxproj|D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTutorial\\DXRSample.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{10B4EE09-A906-41C9-94A3-5980DD97E13B}|DXRTutorial\\DXRTutorial.vcxproj|solutionrelative:DXRTutorial\\DXRSample.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10B4EE09-A906-41C9-94A3-5980DD97E13B}|DXRTutorial\\DXRTutorial.vcxproj|D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTutorial\\DXRSample.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{10B4EE09-A906-41C9-94A3-5980DD97E13B}|DXRTutorial\\DXRTutorial.vcxproj|solutionrelative:DXRTutorial\\DXRSample.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10B4EE09-A906-41C9-94A3-5980DD97E13B}|DXRTutorial\\DXRTutorial.vcxproj|D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTutorial\\D3DUtil.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{10B4EE09-A906-41C9-94A3-5980DD97E13B}|DXRTutorial\\DXRTutorial.vcxproj|solutionrelative:DXRTutorial\\D3DUtil.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10B4EE09-A906-41C9-94A3-5980DD97E13B}|DXRTutorial\\DXRTutorial.vcxproj|D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTutorial\\DDSTextureLoader.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{10B4EE09-A906-41C9-94A3-5980DD97E13B}|DXRTutorial\\DXRTutorial.vcxproj|solutionrelative:DXRTutorial\\DDSTextureLoader.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10B4EE09-A906-41C9-94A3-5980DD97E13B}|DXRTutorial\\DXRTutorial.vcxproj|D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTutorial\\Application.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{10B4EE09-A906-41C9-94A3-5980DD97E13B}|DXRTutorial\\DXRTutorial.vcxproj|solutionrelative:DXRTutorial\\Application.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10B4EE09-A906-41C9-94A3-5980DD97E13B}|DXRTutorial\\DXRTutorial.vcxproj|D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTutorial\\d3dx12.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{10B4EE09-A906-41C9-94A3-5980DD97E13B}|DXRTutorial\\DXRTutorial.vcxproj|solutionrelative:DXRTutorial\\d3dx12.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10B4EE09-A906-41C9-94A3-5980DD97E13B}|DXRTutorial\\DXRTutorial.vcxproj|D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTutorial\\Headers.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{10B4EE09-A906-41C9-94A3-5980DD97E13B}|DXRTutorial\\DXRTutorial.vcxproj|solutionrelative:DXRTutorial\\Headers.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10B4EE09-A906-41C9-94A3-5980DD97E13B}|DXRTutorial\\DXRTutorial.vcxproj|D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTutorial\\Util.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{10B4EE09-A906-41C9-94A3-5980DD97E13B}|DXRTutorial\\DXRTutorial.vcxproj|solutionrelative:DXRTutorial\\Util.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10B4EE09-A906-41C9-94A3-5980DD97E13B}|DXRTutorial\\DXRTutorial.vcxproj|D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTutorial\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{10B4EE09-A906-41C9-94A3-5980DD97E13B}|DXRTutorial\\DXRTutorial.vcxproj|solutionrelative:DXRTutorial\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,23 +50,140 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 5,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DXRSample.cpp",
+              "DocumentMoniker": "D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTutorial\\DXRSample.cpp",
+              "RelativeDocumentMoniker": "DXRTutorial\\DXRSample.cpp",
+              "ToolTip": "D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTutorial\\DXRSample.cpp",
+              "RelativeToolTip": "DXRTutorial\\DXRSample.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-05-19T11:34:51.586Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DDSTextureLoader.h",
+              "DocumentMoniker": "D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTutorial\\DDSTextureLoader.h",
+              "RelativeDocumentMoniker": "DXRTutorial\\DDSTextureLoader.h",
+              "ToolTip": "D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTutorial\\DDSTextureLoader.h",
+              "RelativeToolTip": "DXRTutorial\\DDSTextureLoader.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-19T11:47:31.653Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "D3DUtil.h",
+              "DocumentMoniker": "D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTutorial\\D3DUtil.h",
+              "RelativeDocumentMoniker": "DXRTutorial\\D3DUtil.h",
+              "ToolTip": "D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTutorial\\D3DUtil.h",
+              "RelativeToolTip": "DXRTutorial\\D3DUtil.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-19T11:43:38.251Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "d3dx12.h",
+              "DocumentMoniker": "D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTutorial\\d3dx12.h",
+              "RelativeDocumentMoniker": "DXRTutorial\\d3dx12.h",
+              "ToolTip": "D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTutorial\\d3dx12.h",
+              "RelativeToolTip": "DXRTutorial\\d3dx12.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-19T11:43:32.478Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "DXRTutorial.cpp",
-              "DocumentMoniker": "D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTutorial\\DXRTutorial.cpp",
-              "RelativeDocumentMoniker": "DXRTutorial\\DXRTutorial.cpp",
-              "ToolTip": "D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTutorial\\DXRTutorial.cpp",
-              "RelativeToolTip": "DXRTutorial\\DXRTutorial.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAsAAAAAAAAAA==",
+              "Title": "Application.cpp",
+              "DocumentMoniker": "D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTutorial\\Application.cpp",
+              "RelativeDocumentMoniker": "DXRTutorial\\Application.cpp",
+              "ToolTip": "D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTutorial\\Application.cpp",
+              "RelativeToolTip": "DXRTutorial\\Application.cpp",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAAFcAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-05-19T01:32:43.576Z",
+              "WhenOpened": "2025-05-19T11:35:50.452Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DXRSample.h",
+              "DocumentMoniker": "D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTutorial\\DXRSample.h",
+              "RelativeDocumentMoniker": "DXRTutorial\\DXRSample.h",
+              "ToolTip": "D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTutorial\\DXRSample.h",
+              "RelativeToolTip": "DXRTutorial\\DXRSample.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-19T06:04:57.368Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Util.h",
+              "DocumentMoniker": "D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTutorial\\Util.h",
+              "RelativeDocumentMoniker": "DXRTutorial\\Util.h",
+              "ToolTip": "D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTutorial\\Util.h",
+              "RelativeToolTip": "DXRTutorial\\Util.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-19T01:47:51.64Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Application.h",
+              "DocumentMoniker": "D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTutorial\\Application.h",
+              "RelativeDocumentMoniker": "DXRTutorial\\Application.h",
+              "ToolTip": "D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTutorial\\Application.h",
+              "RelativeToolTip": "DXRTutorial\\Application.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-19T01:42:23.847Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Headers.h",
+              "DocumentMoniker": "D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTutorial\\Headers.h",
+              "RelativeDocumentMoniker": "DXRTutorial\\Headers.h",
+              "ToolTip": "D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTutorial\\Headers.h",
+              "RelativeToolTip": "DXRTutorial\\Headers.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-19T01:40:18.073Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "main.cpp",
+              "DocumentMoniker": "D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTutorial\\main.cpp",
+              "RelativeDocumentMoniker": "DXRTutorial\\main.cpp",
+              "ToolTip": "D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTutorial\\main.cpp",
+              "RelativeToolTip": "DXRTutorial\\main.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-05-19T01:39:49.053Z",
               "EditorCaption": ""
             }
           ]

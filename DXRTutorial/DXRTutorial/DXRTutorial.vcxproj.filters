@@ -4,8 +4,45 @@
     <Filter Include="Source">
       <UniqueIdentifier>{33e88f38-4859-4fcb-8fd1-44eafc5035f1}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Headers">
+    <Filter Include="Include">
       <UniqueIdentifier>{da44c05a-cfe4-4506-bb8e-4bd205e3f4de}</UniqueIdentifier>
     </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Application.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="DXRSample.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Headers.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Application.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Util.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="D3DUtil.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="d3dx12.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="MathHelper.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="DDSTextureLoader.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="DXRSample.h">
+      <Filter>Include</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
