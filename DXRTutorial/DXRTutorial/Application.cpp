@@ -10,7 +10,7 @@ int Application::Run(DXRSample* pSample, HINSTANCE hInstance, int cmdShow)
 	LocalFree(argv);
 	
 	WNDCLASSEX windowClass = { 0 };
-	windowClass.cbClsExtra = sizeof(WNDCLASSEX);
+	windowClass.cbSize = sizeof(WNDCLASSEX);
 	windowClass.style = CS_HREDRAW | CS_VREDRAW;
 	windowClass.lpfnWndProc = WindowProc;
 	windowClass.hInstance = hInstance;
@@ -27,11 +27,11 @@ int Application::Run(DXRSample* pSample, HINSTANCE hInstance, int cmdShow)
 		WS_OVERLAPPEDWINDOW, CW_USEDEFAULT, CW_USEDEFAULT,
 		windowRect.right - windowRect.left,
 		windowRect.bottom - windowRect.top,
-		nullptr, // We have no parent window.
-		nullptr, // We aren't using menus.
-		hInstance, pSample);
-
+		NULL, // We have no parent window.
+		NULL, // We aren't using menus.
+		hInstance,pSample);
 	pSample->Initialize();
+
 	ShowWindow(_hwnd, cmdShow);
 
 	MSG msg = {};
@@ -71,30 +71,6 @@ LRESULT Application::WindowProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM l
 			reinterpret_cast<LONG_PTR>(pCreateStruct->lpCreateParams));
 	}
 	return 0;
-
-	case WM_KEYDOWN:
-		if (pSample)
-		{
-			pSample->OnKeyDown(static_cast<UINT8>(wParam));
-		}
-		if (static_cast<UINT8>(wParam) == VK_ESCAPE)
-			PostQuitMessage(0);
-		return 0;
-
-	case WM_KEYUP:
-		if (pSample)
-		{
-			pSample->OnKeyUp(static_cast<UINT8>(wParam));
-		}
-		return 0;
-
-	case WM_PAINT:
-		if (pSample)
-		{
-			pSample->Update();
-			pSample->Render();
-		}
-		return 0;
 
 	case WM_DESTROY:
 		PostQuitMessage(0);

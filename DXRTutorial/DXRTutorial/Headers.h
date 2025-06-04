@@ -1,8 +1,9 @@
 #pragma once
-#include <d3d12.h>
-#include <dxgi1_4.h>
+#include <dxgi1_5.h>
 #include <d3dcompiler.h>
 #include <directxtk/SimpleMath.h>
+#include <dxcapi.h>
+#include <Windows.h>
 #include "d3dx12.h"
 #include "D3DUtil.h"
 
@@ -15,3 +16,6 @@
 
 using namespace Microsoft::WRL;
 using namespace DirectX::SimpleMath;
+
+
+#include "Util.h"

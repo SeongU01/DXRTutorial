@@ -10,12 +10,13 @@ public:
 	virtual void Initialize() = 0;
 	virtual void Update() = 0;
 	virtual void Render() = 0;
+	virtual void Flip() = 0;
 	virtual void Finalize() = 0;
 	
 	virtual void OnKeyDown(UINT8) {}
 	virtual void OnKeyUp(UINT8) {}
-	UINT GetWidth() { return _width; }
-	UINT GetHeight() { return _height; }
+	UINT GetWidth() const { return _width; }
+	UINT GetHeight() const { return _height; }
 	const WCHAR* GetTitle()const { return _title.c_str(); }
 	void ParseCommnadLineArgs(_In_reads_(argc)WCHAR* argv[],int argc);
 protected:
@@ -27,6 +28,8 @@ protected:
 	float _aspectRatio;
 
 	bool _useWarpDevice;
+
+	std::vector<ComPtr<ID3D12Resource>> _uploadBuffers;
 private:
 	std::wstring _title;
 };

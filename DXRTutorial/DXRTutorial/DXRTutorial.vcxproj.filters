@@ -7,16 +7,37 @@
     <Filter Include="Include">
       <UniqueIdentifier>{da44c05a-cfe4-4506-bb8e-4bd205e3f4de}</UniqueIdentifier>
     </Filter>
+    <Filter Include="nv_helpers">
+      <UniqueIdentifier>{02267673-1090-43af-8c6c-c34111b9caa4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
     <ClCompile Include="Application.cpp">
       <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="DXRSample.cpp">
       <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="D3DUtil.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Util.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="nv_helpers_dx12\BottomLevelASGenerator.cpp">
+      <Filter>nv_helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="nv_helpers_dx12\RaytracingPipelineGenerator.cpp">
+      <Filter>nv_helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="nv_helpers_dx12\RootSignatureGenerator.cpp">
+      <Filter>nv_helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="nv_helpers_dx12\ShaderBindingTableGenerator.cpp">
+      <Filter>nv_helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="nv_helpers_dx12\TopLevelASGenerator.cpp">
+      <Filter>nv_helpers</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -43,6 +64,24 @@
     </ClInclude>
     <ClInclude Include="DXRSample.h">
       <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="nv_helpers_dx12\BottomLevelASGenerator.h">
+      <Filter>nv_helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="nv_helpers_dx12\DXRHelper.h">
+      <Filter>nv_helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="nv_helpers_dx12\RaytracingPipelineGenerator.h">
+      <Filter>nv_helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="nv_helpers_dx12\RootSignatureGenerator.h">
+      <Filter>nv_helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="nv_helpers_dx12\ShaderBindingTableGenerator.h">
+      <Filter>nv_helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="nv_helpers_dx12\TopLevelASGenerator.h">
+      <Filter>nv_helpers</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
