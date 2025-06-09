@@ -120,4 +120,6 @@ public:
 		ComPtr<ID3D12Resource>& buffer, ID3D12Device* device);
 
     static IDxcBlob* CompileShaderLibrary(LPCWSTR fileName);
+
+    static HRESULT UpdateBuffer(const ComPtr<ID3D12Resource>& buffer, void* data, UINT size);
 };

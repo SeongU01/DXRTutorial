@@ -7,8 +7,7 @@
 #include <fstream>
 #include <sstream>
 #include <string>
-#include <d3d12.h>
-#include "Headers.h"
+#include "../Headers.h"
 #include <dxcapi.h>
 
 #include <vector>

@@ -75,7 +75,7 @@ namespace nv_helpers_dx12
 		// invocated upon hitting the geometry
 	)
 	{
-		m_instances.emplace_back(Instance(bottomLevelAS, transform, instanceID, hitGroupIndex));
+		m_instances.push_back(Instance(bottomLevelAS, transform, instanceID, hitGroupIndex));
 	}
 
 	//--------------------------------------------------------------------------------------------------

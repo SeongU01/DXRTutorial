@@ -172,3 +172,24 @@ IDxcBlob* d3dUtil::CompileShaderLibrary(LPCWSTR fileName)
 	FAILED_CHECK_BREAK(pResult->GetResult(&pBlob));
 	return pBlob;
 }
+
+HRESULT d3dUtil::UpdateBuffer(const ComPtr<ID3D12Resource>& buffer, void* data, UINT size)
+{
+	HRESULT hr = S_OK;
+	if (nullptr == data)
+		return hr;
+
+	uint8_t* temp = nullptr;
+	hr = buffer->Map(0, nullptr, (void**)&temp);
+
+	if (FAILED(hr) || nullptr == temp)
+	{
+		__debugbreak();
+		return hr;
+	}
+
+	memcpy(temp, data, size);
+	buffer->Unmap(0, nullptr);
+
+	return hr;
+}
