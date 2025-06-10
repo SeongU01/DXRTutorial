@@ -3,58 +3,16 @@
   "WorkspaceRootPath": "D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{10B4EE09-A906-41C9-94A3-5980DD97E13B}|DXRTutorial\\DXRTutorial.vcxproj|D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTutorial\\nv_helpers_dx12\\TopLevelASGenerator.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{10B4EE09-A906-41C9-94A3-5980DD97E13B}|DXRTutorial\\DXRTutorial.vcxproj|solutionrelative:DXRTutorial\\nv_helpers_dx12\\TopLevelASGenerator.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{C2C18D46-C0AC-4547-9681-4E7C9756F8D0}|04.DXRTriagnelRework\\04.DXRTriagnelRework.vcxproj|D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\04.DXRTriagnelRework\\DXRTriagnelReworkApp.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C2C18D46-C0AC-4547-9681-4E7C9756F8D0}|04.DXRTriagnelRework\\04.DXRTriagnelRework.vcxproj|solutionrelative:04.DXRTriagnelRework\\DXRTriagnelReworkApp.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{10B4EE09-A906-41C9-94A3-5980DD97E13B}|DXRTutorial\\DXRTutorial.vcxproj|D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTutorial\\nv_helpers_dx12\\TopLevelASGenerator.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{10B4EE09-A906-41C9-94A3-5980DD97E13B}|DXRTutorial\\DXRTutorial.vcxproj|solutionrelative:DXRTutorial\\nv_helpers_dx12\\TopLevelASGenerator.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{C2C18D46-C0AC-4547-9681-4E7C9756F8D0}|04.DXRTriagnelRework\\04.DXRTriagnelRework.vcxproj|D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\04.DXRTriagnelRework\\DXRTriagnelReworkApp.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C2C18D46-C0AC-4547-9681-4E7C9756F8D0}|04.DXRTriagnelRework\\04.DXRTriagnelRework.vcxproj|solutionrelative:04.DXRTriagnelRework\\DXRTriagnelReworkApp.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Git_Reference\\vcpkg\\installed\\x64-windows\\include\\directxtk12\\SimpleMath.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Git_Reference\\vcpkg\\installed\\x64-windows\\include\\directxtk\\SimpleMath.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8805767-AD07-4B4E-875F-E8B61237DB87}|DXRTriangleInstanceAnimation\\DXRTriangleInstanceAnimation.vcxproj|D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTriangleInstanceAnimation\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{D8805767-AD07-4B4E-875F-E8B61237DB87}|DXRTriangleInstanceAnimation\\DXRTriangleInstanceAnimation.vcxproj|solutionrelative:DXRTriangleInstanceAnimation\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8805767-AD07-4B4E-875F-E8B61237DB87}|DXRTriangleInstanceAnimation\\DXRTriangleInstanceAnimation.vcxproj|D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTriangleInstanceAnimation\\DXRTriangleInstanceAnimationApp.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{D8805767-AD07-4B4E-875F-E8B61237DB87}|DXRTriangleInstanceAnimation\\DXRTriangleInstanceAnimation.vcxproj|solutionrelative:DXRTriangleInstanceAnimation\\DXRTriangleInstanceAnimationApp.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTriangleInstanceAnimation\\shaders\\RayGen.hlsl||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DXRTriangleInstanceAnimation\\shaders\\RayGen.hlsl||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTriangleInstanceAnimation\\shaders\\ShadowRay.hlsl||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DXRTriangleInstanceAnimation\\shaders\\ShadowRay.hlsl||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTriangleInstanceAnimation\\shaders\\Common.hlsl||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DXRTriangleInstanceAnimation\\shaders\\Common.hlsl||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTriangleInstanceAnimation\\shaders\\Hit.hlsl||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DXRTriangleInstanceAnimation\\shaders\\Hit.hlsl||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{10B4EE09-A906-41C9-94A3-5980DD97E13B}|DXRTutorial\\DXRTutorial.vcxproj|D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTutorial\\nv_helpers_dx12\\RaytracingPipelineGenerator.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{10B4EE09-A906-41C9-94A3-5980DD97E13B}|DXRTutorial\\DXRTutorial.vcxproj|solutionrelative:DXRTutorial\\nv_helpers_dx12\\RaytracingPipelineGenerator.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTriangleInstanceAnimation\\shaders\\shaders.hlsl||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DXRTriangleInstanceAnimation\\shaders\\shaders.hlsl||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTriangleInstanceAnimation\\shaders\\Miss.hlsl||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DXRTriangleInstanceAnimation\\shaders\\Miss.hlsl||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8805767-AD07-4B4E-875F-E8B61237DB87}|DXRTriangleInstanceAnimation\\DXRTriangleInstanceAnimation.vcxproj|D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTriangleInstanceAnimation\\DXRTriangleInstanceAnimationApp.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{D8805767-AD07-4B4E-875F-E8B61237DB87}|DXRTriangleInstanceAnimation\\DXRTriangleInstanceAnimation.vcxproj|solutionrelative:DXRTriangleInstanceAnimation\\DXRTriangleInstanceAnimationApp.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{C2C18D46-C0AC-4547-9681-4E7C9756F8D0}|04.DXRTriagnelRework\\04.DXRTriagnelRework.vcxproj|D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\04.DXRTriagnelRework\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C2C18D46-C0AC-4547-9681-4E7C9756F8D0}|04.DXRTriagnelRework\\04.DXRTriagnelRework.vcxproj|solutionrelative:04.DXRTriagnelRework\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -64,192 +22,49 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 2,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "SimpleMath.h",
-              "DocumentMoniker": "D:\\Git_Reference\\vcpkg\\installed\\x64-windows\\include\\directxtk12\\SimpleMath.h",
-              "RelativeDocumentMoniker": "..\\..\\..\\Git_Reference\\vcpkg\\installed\\x64-windows\\include\\directxtk12\\SimpleMath.h",
-              "ToolTip": "D:\\Git_Reference\\vcpkg\\installed\\x64-windows\\include\\directxtk12\\SimpleMath.h",
-              "RelativeToolTip": "..\\..\\..\\Git_Reference\\vcpkg\\installed\\x64-windows\\include\\directxtk12\\SimpleMath.h",
-              "ViewState": "AgIAAK0BAAAAAAAAAAAWwM0BAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-06-10T02:14:38.623Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "SimpleMath.h",
-              "DocumentMoniker": "D:\\Git_Reference\\vcpkg\\installed\\x64-windows\\include\\directxtk\\SimpleMath.h",
-              "RelativeDocumentMoniker": "..\\..\\..\\Git_Reference\\vcpkg\\installed\\x64-windows\\include\\directxtk\\SimpleMath.h",
-              "ToolTip": "D:\\Git_Reference\\vcpkg\\installed\\x64-windows\\include\\directxtk\\SimpleMath.h",
-              "RelativeToolTip": "..\\..\\..\\Git_Reference\\vcpkg\\installed\\x64-windows\\include\\directxtk\\SimpleMath.h",
-              "ViewState": "AgIAAN0DAAAAAAAAAAAAAOMDAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-06-10T02:06:19.111Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "TopLevelASGenerator.h",
-              "DocumentMoniker": "D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTutorial\\nv_helpers_dx12\\TopLevelASGenerator.h",
-              "RelativeDocumentMoniker": "DXRTutorial\\nv_helpers_dx12\\TopLevelASGenerator.h",
-              "ToolTip": "D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTutorial\\nv_helpers_dx12\\TopLevelASGenerator.h",
-              "RelativeToolTip": "DXRTutorial\\nv_helpers_dx12\\TopLevelASGenerator.h",
-              "ViewState": "AgIAAGIAAAAAAAAAAAAWwIwAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-06-10T02:02:40.877Z",
+              "DocumentIndex": 2,
+              "Title": "main.cpp",
+              "DocumentMoniker": "D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\04.DXRTriagnelRework\\main.cpp",
+              "RelativeDocumentMoniker": "04.DXRTriagnelRework\\main.cpp",
+              "ToolTip": "D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\04.DXRTriagnelRework\\main.cpp",
+              "RelativeToolTip": "04.DXRTriagnelRework\\main.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-06-10T03:03:10.637Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "TopLevelASGenerator.cpp",
-              "DocumentMoniker": "D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTutorial\\nv_helpers_dx12\\TopLevelASGenerator.cpp",
-              "RelativeDocumentMoniker": "DXRTutorial\\nv_helpers_dx12\\TopLevelASGenerator.cpp",
-              "ToolTip": "D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTutorial\\nv_helpers_dx12\\TopLevelASGenerator.cpp",
-              "RelativeToolTip": "DXRTutorial\\nv_helpers_dx12\\TopLevelASGenerator.cpp",
-              "ViewState": "AgIAAKIAAAAAAAAAAAAAAMAAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-06-10T02:02:29.116Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "RaytracingPipelineGenerator.cpp",
-              "DocumentMoniker": "D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTutorial\\nv_helpers_dx12\\RaytracingPipelineGenerator.cpp",
-              "RelativeDocumentMoniker": "DXRTutorial\\nv_helpers_dx12\\RaytracingPipelineGenerator.cpp",
-              "ToolTip": "D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTutorial\\nv_helpers_dx12\\RaytracingPipelineGenerator.cpp",
-              "RelativeToolTip": "DXRTutorial\\nv_helpers_dx12\\RaytracingPipelineGenerator.cpp",
-              "ViewState": "AgIAAIkBAAAAAAAAAAAAAI8BAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-06-09T11:03:04.376Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Miss.hlsl",
-              "DocumentMoniker": "D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTriangleInstanceAnimation\\shaders\\Miss.hlsl",
-              "RelativeDocumentMoniker": "DXRTriangleInstanceAnimation\\shaders\\Miss.hlsl",
-              "ToolTip": "D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTriangleInstanceAnimation\\shaders\\Miss.hlsl",
-              "RelativeToolTip": "DXRTriangleInstanceAnimation\\shaders\\Miss.hlsl",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002777|",
-              "WhenOpened": "2025-06-09T06:00:56.793Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ShadowRay.hlsl",
-              "DocumentMoniker": "D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTriangleInstanceAnimation\\shaders\\ShadowRay.hlsl",
-              "RelativeDocumentMoniker": "DXRTriangleInstanceAnimation\\shaders\\ShadowRay.hlsl",
-              "ToolTip": "D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTriangleInstanceAnimation\\shaders\\ShadowRay.hlsl",
-              "RelativeToolTip": "DXRTriangleInstanceAnimation\\shaders\\ShadowRay.hlsl",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002777|",
-              "WhenOpened": "2025-06-09T09:27:56.805Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "main.cpp",
-              "DocumentMoniker": "D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTriangleInstanceAnimation\\main.cpp",
-              "RelativeDocumentMoniker": "DXRTriangleInstanceAnimation\\main.cpp",
-              "ToolTip": "D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTriangleInstanceAnimation\\main.cpp",
-              "RelativeToolTip": "DXRTriangleInstanceAnimation\\main.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-06-09T09:12:07.142Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "shaders.hlsl",
-              "DocumentMoniker": "D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTriangleInstanceAnimation\\shaders\\shaders.hlsl",
-              "RelativeDocumentMoniker": "DXRTriangleInstanceAnimation\\shaders\\shaders.hlsl",
-              "ToolTip": "D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTriangleInstanceAnimation\\shaders\\shaders.hlsl",
-              "RelativeToolTip": "DXRTriangleInstanceAnimation\\shaders\\shaders.hlsl",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002777|",
-              "WhenOpened": "2025-06-09T06:00:56.881Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "RayGen.hlsl",
-              "DocumentMoniker": "D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTriangleInstanceAnimation\\shaders\\RayGen.hlsl",
-              "RelativeDocumentMoniker": "DXRTriangleInstanceAnimation\\shaders\\RayGen.hlsl",
-              "ToolTip": "D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTriangleInstanceAnimation\\shaders\\RayGen.hlsl",
-              "RelativeToolTip": "DXRTriangleInstanceAnimation\\shaders\\RayGen.hlsl",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002777|",
-              "WhenOpened": "2025-06-09T06:00:56.839Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Hit.hlsl",
-              "DocumentMoniker": "D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTriangleInstanceAnimation\\shaders\\Hit.hlsl",
-              "RelativeDocumentMoniker": "DXRTriangleInstanceAnimation\\shaders\\Hit.hlsl",
-              "ToolTip": "D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTriangleInstanceAnimation\\shaders\\Hit.hlsl",
-              "RelativeToolTip": "DXRTriangleInstanceAnimation\\shaders\\Hit.hlsl",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAAABsAAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002777|",
-              "WhenOpened": "2025-06-09T06:00:56.749Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Common.hlsl",
-              "DocumentMoniker": "D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTriangleInstanceAnimation\\shaders\\Common.hlsl",
-              "RelativeDocumentMoniker": "DXRTriangleInstanceAnimation\\shaders\\Common.hlsl",
-              "ToolTip": "D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTriangleInstanceAnimation\\shaders\\Common.hlsl",
-              "RelativeToolTip": "DXRTriangleInstanceAnimation\\shaders\\Common.hlsl",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002777|",
-              "WhenOpened": "2025-06-09T06:00:56.698Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "DXRTriangleInstanceAnimationApp.h",
-              "DocumentMoniker": "D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTriangleInstanceAnimation\\DXRTriangleInstanceAnimationApp.h",
-              "RelativeDocumentMoniker": "DXRTriangleInstanceAnimation\\DXRTriangleInstanceAnimationApp.h",
-              "ToolTip": "D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTriangleInstanceAnimation\\DXRTriangleInstanceAnimationApp.h",
-              "RelativeToolTip": "DXRTriangleInstanceAnimation\\DXRTriangleInstanceAnimationApp.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAlAAAAAAAAAA==",
+              "Title": "DXRTriagnelReworkApp.h",
+              "DocumentMoniker": "D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\04.DXRTriagnelRework\\DXRTriagnelReworkApp.h",
+              "RelativeDocumentMoniker": "04.DXRTriagnelRework\\DXRTriagnelReworkApp.h",
+              "ToolTip": "D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\04.DXRTriagnelRework\\DXRTriagnelReworkApp.h*",
+              "RelativeToolTip": "04.DXRTriagnelRework\\DXRTriagnelReworkApp.h*",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACwAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-06-09T06:00:02.783Z",
+              "WhenOpened": "2025-06-10T03:02:07.924Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "DXRTriangleInstanceAnimationApp.cpp",
-              "DocumentMoniker": "D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTriangleInstanceAnimation\\DXRTriangleInstanceAnimationApp.cpp",
-              "RelativeDocumentMoniker": "DXRTriangleInstanceAnimation\\DXRTriangleInstanceAnimationApp.cpp",
-              "ToolTip": "D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTriangleInstanceAnimation\\DXRTriangleInstanceAnimationApp.cpp",
-              "RelativeToolTip": "DXRTriangleInstanceAnimation\\DXRTriangleInstanceAnimationApp.cpp",
-              "ViewState": "AgIAANQBAAAAAAAAAAAowOgBAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "DXRTriagnelReworkApp.cpp",
+              "DocumentMoniker": "D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\04.DXRTriagnelRework\\DXRTriagnelReworkApp.cpp",
+              "RelativeDocumentMoniker": "04.DXRTriagnelRework\\DXRTriagnelReworkApp.cpp",
+              "ToolTip": "D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\04.DXRTriagnelRework\\DXRTriagnelReworkApp.cpp*",
+              "RelativeToolTip": "04.DXRTriagnelRework\\DXRTriagnelReworkApp.cpp*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-06-09T06:00:01.607Z",
+              "WhenOpened": "2025-06-10T03:02:07.432Z",
               "EditorCaption": ""
             }
           ]

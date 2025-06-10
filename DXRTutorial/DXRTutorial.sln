@@ -5,11 +5,13 @@ VisualStudioVersion = 17.13.35931.197
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DXRTutorial", "DXRTutorial\DXRTutorial.vcxproj", "{10B4EE09-A906-41C9-94A3-5980DD97E13B}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DXRTriangle", "DXRTriangle\DXRTriangle.vcxproj", "{F7123B52-F4B3-4F42-8E68-CBBEF0831EEC}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "01.DXRTriangle", "01.DXRTriangle\01.DXRTriangle.vcxproj", "{F7123B52-F4B3-4F42-8E68-CBBEF0831EEC}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DXRTriangleInstance", "DXRTriangleInstance\DXRTriangleInstance.vcxproj", "{2CDC5679-DCD7-41BA-8929-8031B6F836F4}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "02.DXRTriangleInstance", "02.DXRTriangleInstance\02.DXRTriangleInstance.vcxproj", "{2CDC5679-DCD7-41BA-8929-8031B6F836F4}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DXRTriangleInstanceAnimation", "DXRTriangleInstanceAnimation\DXRTriangleInstanceAnimation.vcxproj", "{D8805767-AD07-4B4E-875F-E8B61237DB87}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "03.DXRTriangleInstanceAnimation", "03.DXRTriangleInstanceAnimation\03.DXRTriangleInstanceAnimation.vcxproj", "{D8805767-AD07-4B4E-875F-E8B61237DB87}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "04.DXRTriagnelRework", "04.DXRTriagnelRework\04.DXRTriagnelRework.vcxproj", "{C2C18D46-C0AC-4547-9681-4E7C9756F8D0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,14 @@ Global
 		{D8805767-AD07-4B4E-875F-E8B61237DB87}.Release|x64.Build.0 = Release|x64
 		{D8805767-AD07-4B4E-875F-E8B61237DB87}.Release|x86.ActiveCfg = Release|Win32
 		{D8805767-AD07-4B4E-875F-E8B61237DB87}.Release|x86.Build.0 = Release|Win32
+		{C2C18D46-C0AC-4547-9681-4E7C9756F8D0}.Debug|x64.ActiveCfg = Debug|x64
+		{C2C18D46-C0AC-4547-9681-4E7C9756F8D0}.Debug|x64.Build.0 = Debug|x64
+		{C2C18D46-C0AC-4547-9681-4E7C9756F8D0}.Debug|x86.ActiveCfg = Debug|Win32
+		{C2C18D46-C0AC-4547-9681-4E7C9756F8D0}.Debug|x86.Build.0 = Debug|Win32
+		{C2C18D46-C0AC-4547-9681-4E7C9756F8D0}.Release|x64.ActiveCfg = Release|x64
+		{C2C18D46-C0AC-4547-9681-4E7C9756F8D0}.Release|x64.Build.0 = Release|x64
+		{C2C18D46-C0AC-4547-9681-4E7C9756F8D0}.Release|x86.ActiveCfg = Release|Win32
+		{C2C18D46-C0AC-4547-9681-4E7C9756F8D0}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
