@@ -1,9 +1,10 @@
 #include "Application.h"
 #include "DXRSample.h"
 HWND Application::_hwnd = nullptr;
-
+GameTimer* Application::_pTimer = nullptr;
 int Application::Run(DXRSample* pSample, HINSTANCE hInstance, int cmdShow)
 {
+	_pTimer = GameTimer::GetInstance();
 	int argc;
 	LPWSTR* argv = CommandLineToArgvW(GetCommandLineW(), &argc);
 	pSample->ParseCommnadLineArgs(argv, argc);
@@ -35,7 +36,7 @@ int Application::Run(DXRSample* pSample, HINSTANCE hInstance, int cmdShow)
 	ShowWindow(_hwnd, cmdShow);
 
 	MSG msg = {};
-
+	_pTimer->Reset();
 		while (true)
 		{
 			if (PeekMessage(&msg, nullptr, 0, 0, PM_REMOVE))
@@ -48,12 +49,39 @@ int Application::Run(DXRSample* pSample, HINSTANCE hInstance, int cmdShow)
 			}
 			else
 			{
-				pSample->Update();
+				_pTimer->Tick();
+				CalculateFrameRate();
+				float delta = _pTimer->DeltaTime();
+				pSample->Update(delta);
 				pSample->Render();
 			}
 		}
 	pSample->Finalize();
+	delete _pTimer;
 	return static_cast<char>(msg.wParam);
+}
+
+void Application::CalculateFrameRate()
+{
+	static int frameCnt = 0;
+	static float elapsed = 0.f;
+	frameCnt++;
+	if (GameTimer::GetInstance()->TotalTime() - elapsed >= 1.f)
+	{
+		float fps = (float)frameCnt;
+		float mspf = 1000.f / fps;
+		std::wstring fpsStr = std::to_wstring(fps);
+		std::wstring mspfStr = std::to_wstring(mspf);
+		std::wstring windowText =
+			L"    fps: " + fpsStr + L"   mspf: " + mspfStr;
+
+		SetWindowText(_hwnd,
+			windowText.c_str());
+
+		// Reset for next average.
+		frameCnt = 0;
+		elapsed += 1.0f;
+	}
 }
 
 LRESULT Application::WindowProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)

@@ -9,7 +9,7 @@ public:
 	DXRTriangleApp(UINT width, UINT height, std::wstring name);
 
 	void Initialize() override;
-	void Update() override;
+	void Update(const float& dt) override;
 	void Render() override;
 	void Flip() override;
 	void Finalize() override;

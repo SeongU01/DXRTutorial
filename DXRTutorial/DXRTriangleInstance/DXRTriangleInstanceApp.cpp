@@ -18,25 +18,9 @@ DXRTriangleInstanceApp::DXRTriangleInstanceApp(UINT width, UINT height, std::wst
 	_scissorRect.right = width;
 	_scissorRect.bottom = height;
 }
-void Test1(std::vector<XMMATRIX>& m2, const XMMATRIX& m)
-{
-	m2.push_back(m);
-}
+
 void DXRTriangleInstanceApp::Initialize()
 {
-	std::vector<Matrix> m1{
-	{DirectX::XMMatrixIdentity()},
-	{DirectX::XMMatrixTranslation(.6f, 0, 0)},
-	{DirectX::XMMatrixTranslation(-0.6f, 0, 0)},
-	{DirectX::XMMatrixTranslation(0, 0, 0)},
-	};
-
-	std::vector<XMMATRIX> m2;
-	for (int i = 0; i < 4; ++i)
-	{
-		Test1(m2, m1[i]);
-	}
-
 	LoadPipeline();
 	_commandList->Reset(_commandAlloc.Get(), nullptr);
 	LoadAssets();
@@ -52,7 +36,7 @@ void DXRTriangleInstanceApp::Initialize()
 	CreateShaderBindingTable();
 }
 
-void DXRTriangleInstanceApp::Update()
+void DXRTriangleInstanceApp::Update(const float& dt)
 {
 	UpdateCameraBuffer();
 }

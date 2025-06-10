@@ -8,7 +8,7 @@ public:
 	virtual ~DXRSample() = default;
 
 	virtual void Initialize() = 0;
-	virtual void Update() = 0;
+	virtual void Update(const float& dt) = 0;
 	virtual void Render() = 0;
 	virtual void Flip() = 0;
 	virtual void Finalize() = 0;

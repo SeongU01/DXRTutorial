@@ -65,7 +65,7 @@ namespace nv_helpers_dx12
 	void TopLevelASGenerator::AddInstance(
 		ID3D12Resource* bottomLevelAS, // Bottom-level acceleration structure containing the
 		// actual geometric data of the instance
-		const DirectX::XMMATRIX& transform, // Transform matrix to apply to the instance, allowing the
+		const DirectX::SimpleMath::Matrix& transform, // Transform matrix to apply to the instance, allowing the
 		// same bottom-level AS to be used at several world-space
 		// positions
 		const UINT instanceID, // Instance ID, which can be used in the shaders to
@@ -255,7 +255,7 @@ namespace nv_helpers_dx12
 	//--------------------------------------------------------------------------------------------------
 	//
 	//
-	TopLevelASGenerator::Instance::Instance(ID3D12Resource* blAS, const DirectX::XMMATRIX& tr, const UINT iID,
+	TopLevelASGenerator::Instance::Instance(ID3D12Resource* blAS, const DirectX::SimpleMath::Matrix& tr, const UINT iID,
 	                                        const UINT hgId)
 		: bottomLevelAS(blAS), transform(tr), instanceID(iID), hitGroupIndex(hgId)
 	{

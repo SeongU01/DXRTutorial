@@ -22,6 +22,7 @@
     <ClCompile Include="Application.cpp" />
     <ClCompile Include="DXRSample.cpp" />
     <ClCompile Include="D3DUtil.cpp" />
+    <ClCompile Include="GameTimer.cpp" />
     <ClCompile Include="nv_helpers_dx12\BottomLevelASGenerator.cpp" />
     <ClCompile Include="nv_helpers_dx12\RaytracingPipelineGenerator.cpp" />
     <ClCompile Include="nv_helpers_dx12\RootSignatureGenerator.cpp" />
@@ -35,6 +36,7 @@
     <ClInclude Include="d3dx12.h" />
     <ClInclude Include="DDSTextureLoader.h" />
     <ClInclude Include="DXRSample.h" />
+    <ClInclude Include="GameTimer.h" />
     <ClInclude Include="Headers.h" />
     <ClInclude Include="MathHelper.h" />
     <ClInclude Include="nv_helpers_dx12\BottomLevelASGenerator.h" />

@@ -37,7 +37,7 @@ void DXRTriangleApp::Initialize()
 	CreateShaderBindingTable();
 }
 
-void DXRTriangleApp::Update()
+void DXRTriangleApp::Update(const float& dt)
 {
 	static bool prevKeyDown = false;
 	bool currKeyDown = (GetAsyncKeyState(VK_SPACE) & 0x8000) != 0;

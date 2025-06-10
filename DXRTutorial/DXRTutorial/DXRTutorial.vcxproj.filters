@@ -39,6 +39,9 @@
     <ClCompile Include="nv_helpers_dx12\TopLevelASGenerator.cpp">
       <Filter>nv_helpers</Filter>
     </ClCompile>
+    <ClCompile Include="GameTimer.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Headers.h">
@@ -82,6 +85,9 @@
     </ClInclude>
     <ClInclude Include="nv_helpers_dx12\TopLevelASGenerator.h">
       <Filter>nv_helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="GameTimer.h">
+      <Filter>Include</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

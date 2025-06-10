@@ -71,7 +71,7 @@ return buffers;
 #include "d3d12.h"
 
 #include <DirectXMath.h>
-
+#include <directxtk/SimpleMath.h>
 #include <vector>
 
 namespace nv_helpers_dx12
@@ -87,7 +87,7 @@ namespace nv_helpers_dx12
 		void
 		AddInstance(ID3D12Resource* bottomLevelAS, /// Bottom-level acceleration structure containing the
                                              /// actual geometric data of the instance
-		            const DirectX::XMMATRIX& transform, /// Transform matrix to apply to the instance,
+		            const DirectX::SimpleMath::Matrix& transform, /// Transform matrix to apply to the instance,
                                                   /// allowing the same bottom-level AS to be used
                                                   /// at several world-space positions
 		            UINT instanceID, /// Instance ID, which can be used in the shaders to
@@ -134,11 +134,11 @@ namespace nv_helpers_dx12
 		/// Helper struct storing the instance data
 		struct Instance
 		{
-			Instance(ID3D12Resource* blAS, const DirectX::XMMATRIX& tr, UINT iID, UINT hgId);
+			Instance(ID3D12Resource* blAS, const DirectX::SimpleMath::Matrix& tr, UINT iID, UINT hgId);
 			/// Bottom-level AS
 			ID3D12Resource* bottomLevelAS;
 			/// Transform matrix
-			const DirectX::XMMATRIX transform;
+			const DirectX::SimpleMath::Matrix& transform;
 			/// Instance ID visible in the shader
 			UINT instanceID;
 			/// Hit group index used to fetch the shaders from the SBT
