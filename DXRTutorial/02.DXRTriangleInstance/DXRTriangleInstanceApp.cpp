@@ -46,8 +46,6 @@ void DXRTriangleInstanceApp::Render()
 	WriteCommand();
 	ID3D12CommandList* ppCommandLists[] = { _commandList.Get() };
 	_commandQueue->ExecuteCommandLists(_countof(ppCommandLists), ppCommandLists);
-
-	Flip();
 }
 
 void DXRTriangleInstanceApp::Flip()

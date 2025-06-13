@@ -34,8 +34,9 @@ private:
 	ComPtr<ID3D12PipelineState> _pso;
 	ComPtr<ID3D12GraphicsCommandList>_commandList;
 	UINT _rtvDescriptorSize;
-
-
+private:
+	uint32_t BeginFrame();
+	void EndFrame();
 	// sync objects
 	UINT _frameIndex;
 	HANDLE _fenceEvent;
@@ -48,7 +49,31 @@ private:
 	void CreateSyncObject();
 	void CreateRTVHeapAndRTV();
 	void GPUSync();
-
+	void CheckDebug();
+		
 	void CheckDXRSupport()const;
 
+	//DXR Function
+	void CreateAccelerationStructures();
+	ComPtr<ID3D12Resource> _vertexBuffers[2];
+	ComPtr<ID3D12Resource> _bottomLevelAS[2];
+	AccelerationStructureBuffers _topLevelBuffers;
+	uint64_t _tlasSize = 0;
+	
+	void CreateRTPipelineState();
+	ComPtr<ID3D12StateObject> _pipelineState;
+	ComPtr<ID3D12RootSignature> _emptyRootsignature;
+	
+	void CreateShaderTable();
+	ComPtr<ID3D12Resource> _shaderTable;
+	uint32_t _shaderTableEntrySize = 0;
+
+	void CreateShaderResource();
+	ComPtr<ID3D12Resource> _outputResource;
+	ComPtr<ID3D12DescriptorHeap> _srvuavHeap;
+	
+	void CreateConstantBuffer();
+	ComPtr<ID3D12Resource> _constantResource[4];
+
+	float _rotation;
 };

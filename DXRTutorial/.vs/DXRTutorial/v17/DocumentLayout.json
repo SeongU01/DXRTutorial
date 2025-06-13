@@ -3,16 +3,79 @@
   "WorkspaceRootPath": "D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C2C18D46-C0AC-4547-9681-4E7C9756F8D0}|04.DXRTriagnelRework\\04.DXRTriagnelRework.vcxproj|D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\04.DXRTriagnelRework\\DXRTriagnelReworkApp.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{C2C18D46-C0AC-4547-9681-4E7C9756F8D0}|04.DXRTriagnelRework\\04.DXRTriagnelRework.vcxproj|solutionrelative:04.DXRTriagnelRework\\DXRTriagnelReworkApp.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C2C18D46-C0AC-4547-9681-4E7C9756F8D0}|04.DXRTriagnelRework\\04.DXRTriagnelRework.vcxproj|D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\04.DXRTriagnelRework\\DXRTriagnelReworkApp.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{C2C18D46-C0AC-4547-9681-4E7C9756F8D0}|04.DXRTriagnelRework\\04.DXRTriagnelRework.vcxproj|solutionrelative:04.DXRTriagnelRework\\DXRTriagnelReworkApp.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C2C18D46-C0AC-4547-9681-4E7C9756F8D0}|04.DXRTriagnelRework\\04.DXRTriagnelRework.vcxproj|D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\04.DXRTriagnelRework\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{C2C18D46-C0AC-4547-9681-4E7C9756F8D0}|04.DXRTriagnelRework\\04.DXRTriagnelRework.vcxproj|solutionrelative:04.DXRTriagnelRework\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{10B4EE09-A906-41C9-94A3-5980DD97E13B}|DXRTutorial\\DXRTutorial.vcxproj|D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTutorial\\AccelerationStructure.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{10B4EE09-A906-41C9-94A3-5980DD97E13B}|DXRTutorial\\DXRTutorial.vcxproj|solutionrelative:DXRTutorial\\AccelerationStructure.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10B4EE09-A906-41C9-94A3-5980DD97E13B}|DXRTutorial\\DXRTutorial.vcxproj|D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTutorial\\D3DUtil.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{10B4EE09-A906-41C9-94A3-5980DD97E13B}|DXRTutorial\\DXRTutorial.vcxproj|solutionrelative:DXRTutorial\\D3DUtil.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2C18D46-C0AC-4547-9681-4E7C9756F8D0}|04.DXRTriagnelRework\\04.DXRTriagnelRework.vcxproj|D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\04.DXRTriagnelRework\\DXRTriagnelReworkApp.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C2C18D46-C0AC-4547-9681-4E7C9756F8D0}|04.DXRTriagnelRework\\04.DXRTriagnelRework.vcxproj|solutionrelative:04.DXRTriagnelRework\\DXRTriagnelReworkApp.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10B4EE09-A906-41C9-94A3-5980DD97E13B}|DXRTutorial\\DXRTutorial.vcxproj|D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTutorial\\D3DUtil.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{10B4EE09-A906-41C9-94A3-5980DD97E13B}|DXRTutorial\\DXRTutorial.vcxproj|solutionrelative:DXRTutorial\\D3DUtil.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10B4EE09-A906-41C9-94A3-5980DD97E13B}|DXRTutorial\\DXRTutorial.vcxproj|C:\\PROGRAM FILES (X86)\\WINDOWS KITS\\10\\INCLUDE\\10.0.22621.0\\UM\\D3D12.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\04.DXRTriagnelRework\\shaders\\Shaders.hlsl||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:04.DXRTriagnelRework\\shaders\\Shaders.hlsl||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10B4EE09-A906-41C9-94A3-5980DD97E13B}|DXRTutorial\\DXRTutorial.vcxproj|D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTutorial\\RTPipeline.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{10B4EE09-A906-41C9-94A3-5980DD97E13B}|DXRTutorial\\DXRTutorial.vcxproj|solutionrelative:DXRTutorial\\RTPipeline.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10B4EE09-A906-41C9-94A3-5980DD97E13B}|DXRTutorial\\DXRTutorial.vcxproj|D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTUTORIAL\\EXPORTASSOCIATION.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{10B4EE09-A906-41C9-94A3-5980DD97E13B}|DXRTutorial\\DXRTutorial.vcxproj|solutionrelative:DXRTUTORIAL\\EXPORTASSOCIATION.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2C18D46-C0AC-4547-9681-4E7C9756F8D0}|04.DXRTriagnelRework\\04.DXRTriagnelRework.vcxproj|D:\\GITFROMSEONGU01\\DXRTUTORIAL\\DXRTUTORIAL\\DXRTUTORIAL\\DXILLIBRARY.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C2C18D46-C0AC-4547-9681-4E7C9756F8D0}|04.DXRTriagnelRework\\04.DXRTriagnelRework.vcxproj|solutionrelative:DXRTUTORIAL\\DXILLIBRARY.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10B4EE09-A906-41C9-94A3-5980DD97E13B}|DXRTutorial\\DXRTutorial.vcxproj|D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTutorial\\dxcapi.use.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{10B4EE09-A906-41C9-94A3-5980DD97E13B}|DXRTutorial\\DXRTutorial.vcxproj|solutionrelative:DXRTutorial\\dxcapi.use.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CDC5679-DCD7-41BA-8929-8031B6F836F4}|02.DXRTriangleInstance\\02.DXRTriangleInstance.vcxproj|D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\02.DXRTriangleInstance\\DXRTriangleInstanceApp.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{2CDC5679-DCD7-41BA-8929-8031B6F836F4}|02.DXRTriangleInstance\\02.DXRTriangleInstance.vcxproj|solutionrelative:02.DXRTriangleInstance\\DXRTriangleInstanceApp.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10B4EE09-A906-41C9-94A3-5980DD97E13B}|DXRTutorial\\DXRTutorial.vcxproj|D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTutorial\\Application.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{10B4EE09-A906-41C9-94A3-5980DD97E13B}|DXRTutorial\\DXRTutorial.vcxproj|solutionrelative:DXRTutorial\\Application.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F7123B52-F4B3-4F42-8E68-CBBEF0831EEC}|01.DXRTriangle\\01.DXRTriangle.vcxproj|D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\01.DXRTriangle\\DXRTriangleApp.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F7123B52-F4B3-4F42-8E68-CBBEF0831EEC}|01.DXRTriangle\\01.DXRTriangle.vcxproj|solutionrelative:01.DXRTriangle\\DXRTriangleApp.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10B4EE09-A906-41C9-94A3-5980DD97E13B}|DXRTutorial\\DXRTutorial.vcxproj|D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTutorial\\Util.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{10B4EE09-A906-41C9-94A3-5980DD97E13B}|DXRTutorial\\DXRTutorial.vcxproj|solutionrelative:DXRTutorial\\Util.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10B4EE09-A906-41C9-94A3-5980DD97E13B}|DXRTutorial\\DXRTutorial.vcxproj|D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTutorial\\RTPipeline.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{10B4EE09-A906-41C9-94A3-5980DD97E13B}|DXRTutorial\\DXRTutorial.vcxproj|solutionrelative:DXRTutorial\\RTPipeline.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10B4EE09-A906-41C9-94A3-5980DD97E13B}|DXRTutorial\\DXRTutorial.vcxproj|D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTutorial\\Application.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{10B4EE09-A906-41C9-94A3-5980DD97E13B}|DXRTutorial\\DXRTutorial.vcxproj|solutionrelative:DXRTutorial\\Application.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10B4EE09-A906-41C9-94A3-5980DD97E13B}|DXRTutorial\\DXRTutorial.vcxproj|D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTutorial\\Headers.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{10B4EE09-A906-41C9-94A3-5980DD97E13B}|DXRTutorial\\DXRTutorial.vcxproj|solutionrelative:DXRTutorial\\Headers.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10B4EE09-A906-41C9-94A3-5980DD97E13B}|DXRTutorial\\DXRTutorial.vcxproj|D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTUTORIAL\\DXRSAMPLE.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{10B4EE09-A906-41C9-94A3-5980DD97E13B}|DXRTutorial\\DXRTutorial.vcxproj|solutionrelative:DXRTUTORIAL\\DXRSAMPLE.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +85,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 19,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,41 +93,268 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "main.cpp",
-              "DocumentMoniker": "D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\04.DXRTriagnelRework\\main.cpp",
-              "RelativeDocumentMoniker": "04.DXRTriagnelRework\\main.cpp",
-              "ToolTip": "D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\04.DXRTriagnelRework\\main.cpp",
-              "RelativeToolTip": "04.DXRTriagnelRework\\main.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "d3d12.h",
+              "DocumentMoniker": "C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.22621.0\\um\\d3d12.h",
+              "ToolTip": "C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.22621.0\\um\\d3d12.h",
+              "ViewState": "AgIAAPpKAAAAAAAAAIAwwBRLAABLAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-06-12T11:04:29.703Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "DXRTriangleApp.cpp",
+              "DocumentMoniker": "D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\01.DXRTriangle\\DXRTriangleApp.cpp",
+              "RelativeDocumentMoniker": "01.DXRTriangle\\DXRTriangleApp.cpp",
+              "ToolTip": "D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\01.DXRTriangle\\DXRTriangleApp.cpp",
+              "RelativeToolTip": "01.DXRTriangle\\DXRTriangleApp.cpp",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAADkAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-06-10T03:03:10.637Z",
+              "WhenOpened": "2025-06-12T06:50:09.161Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "DXRTriangleInstanceApp.cpp",
+              "DocumentMoniker": "D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\02.DXRTriangleInstance\\DXRTriangleInstanceApp.cpp",
+              "RelativeDocumentMoniker": "02.DXRTriangleInstance\\DXRTriangleInstanceApp.cpp",
+              "ToolTip": "D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\02.DXRTriangleInstance\\DXRTriangleInstanceApp.cpp",
+              "RelativeToolTip": "02.DXRTriangleInstance\\DXRTriangleInstanceApp.cpp",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAAC8AAABOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-06-12T06:50:03.925Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "DxilLibrary.h",
+              "DocumentMoniker": "D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTutorial\\DxilLibrary.h",
+              "RelativeDocumentMoniker": "DXRTutorial\\DxilLibrary.h",
+              "ToolTip": "D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTutorial\\DxilLibrary.h",
+              "RelativeToolTip": "DXRTutorial\\DxilLibrary.h",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAlwCMAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-06-12T06:47:47.08Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "D3DUtil.cpp",
+              "DocumentMoniker": "D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTutorial\\D3DUtil.cpp",
+              "RelativeDocumentMoniker": "DXRTutorial\\D3DUtil.cpp",
+              "ToolTip": "D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTutorial\\D3DUtil.cpp",
+              "RelativeToolTip": "DXRTutorial\\D3DUtil.cpp",
+              "ViewState": "AgIAABcAAAAAAAAAAAAkwDAAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-06-11T08:50:33.133Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "D3DUtil.h",
+              "DocumentMoniker": "D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTutorial\\D3DUtil.h",
+              "RelativeDocumentMoniker": "DXRTutorial\\D3DUtil.h",
+              "ToolTip": "D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTutorial\\D3DUtil.h",
+              "RelativeToolTip": "DXRTutorial\\D3DUtil.h",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAWwFsAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-06-11T08:47:12.878Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ExportAssociation.h",
+              "DocumentMoniker": "D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTutorial\\ExportAssociation.h",
+              "RelativeDocumentMoniker": "DXRTutorial\\ExportAssociation.h",
+              "ToolTip": "D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTutorial\\ExportAssociation.h",
+              "RelativeToolTip": "DXRTutorial\\ExportAssociation.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-06-11T06:24:22.48Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "dxcapi.use.h",
+              "DocumentMoniker": "D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTutorial\\dxcapi.use.h",
+              "RelativeDocumentMoniker": "DXRTutorial\\dxcapi.use.h",
+              "ToolTip": "D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTutorial\\dxcapi.use.h",
+              "RelativeToolTip": "DXRTutorial\\dxcapi.use.h",
+              "ViewState": "AgIAADUAAAAAAAAAAAAlwE4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-06-11T03:10:37.749Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Shaders.hlsl",
+              "DocumentMoniker": "D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\04.DXRTriagnelRework\\shaders\\Shaders.hlsl",
+              "RelativeDocumentMoniker": "04.DXRTriagnelRework\\shaders\\Shaders.hlsl",
+              "ToolTip": "D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\04.DXRTriagnelRework\\shaders\\Shaders.hlsl",
+              "RelativeToolTip": "04.DXRTriagnelRework\\shaders\\Shaders.hlsl",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002777|",
+              "WhenOpened": "2025-06-11T03:08:33.79Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Util.h",
+              "DocumentMoniker": "D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTutorial\\Util.h",
+              "RelativeDocumentMoniker": "DXRTutorial\\Util.h",
+              "ToolTip": "D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTutorial\\Util.h",
+              "RelativeToolTip": "DXRTutorial\\Util.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-06-11T02:38:07.925Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "DXRSample.h",
+              "DocumentMoniker": "D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTutorial\\DXRSample.h",
+              "RelativeDocumentMoniker": "DXRTutorial\\DXRSample.h",
+              "ToolTip": "D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTutorial\\DXRSample.h",
+              "RelativeToolTip": "DXRTutorial\\DXRSample.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-06-11T02:08:23.683Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Application.h",
+              "DocumentMoniker": "D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTutorial\\Application.h",
+              "RelativeDocumentMoniker": "DXRTutorial\\Application.h",
+              "ToolTip": "D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTutorial\\Application.h",
+              "RelativeToolTip": "DXRTutorial\\Application.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-06-11T02:08:22.676Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Application.cpp",
+              "DocumentMoniker": "D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTutorial\\Application.cpp",
+              "RelativeDocumentMoniker": "DXRTutorial\\Application.cpp",
+              "ToolTip": "D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTutorial\\Application.cpp",
+              "RelativeToolTip": "DXRTutorial\\Application.cpp",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAWwCMAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-06-11T02:08:20.864Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "RTPipeline.h",
+              "DocumentMoniker": "D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTutorial\\RTPipeline.h",
+              "RelativeDocumentMoniker": "DXRTutorial\\RTPipeline.h",
+              "ToolTip": "D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTutorial\\RTPipeline.h",
+              "RelativeToolTip": "DXRTutorial\\RTPipeline.h",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAawBoAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-06-11T02:08:12.486Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "RTPipeline.cpp",
+              "DocumentMoniker": "D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTutorial\\RTPipeline.cpp",
+              "RelativeDocumentMoniker": "DXRTutorial\\RTPipeline.cpp",
+              "ToolTip": "D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTutorial\\RTPipeline.cpp",
+              "RelativeToolTip": "DXRTutorial\\RTPipeline.cpp",
+              "ViewState": "AgIAAGkAAAAAAAAAAAAlwJIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-06-11T02:08:11.252Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Headers.h",
+              "DocumentMoniker": "D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTutorial\\Headers.h",
+              "RelativeDocumentMoniker": "DXRTutorial\\Headers.h",
+              "ToolTip": "D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTutorial\\Headers.h",
+              "RelativeToolTip": "DXRTutorial\\Headers.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-06-11T02:08:06.495Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DXRTriagnelReworkApp.h",
+              "DocumentMoniker": "D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\04.DXRTriagnelRework\\DXRTriagnelReworkApp.h",
+              "RelativeDocumentMoniker": "04.DXRTriagnelRework\\DXRTriagnelReworkApp.h",
+              "ToolTip": "D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\04.DXRTriagnelRework\\DXRTriagnelReworkApp.h",
+              "RelativeToolTip": "04.DXRTriagnelRework\\DXRTriagnelReworkApp.h",
+              "ViewState": "AgIAADEAAAAAAAAAAAAWwEsAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-06-11T02:08:05.384Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "DXRTriagnelReworkApp.h",
-              "DocumentMoniker": "D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\04.DXRTriagnelRework\\DXRTriagnelReworkApp.h",
-              "RelativeDocumentMoniker": "04.DXRTriagnelRework\\DXRTriagnelReworkApp.h",
-              "ToolTip": "D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\04.DXRTriagnelRework\\DXRTriagnelReworkApp.h*",
-              "RelativeToolTip": "04.DXRTriagnelRework\\DXRTriagnelReworkApp.h*",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAACwAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-06-10T03:02:07.924Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "DXRTriagnelReworkApp.cpp",
               "DocumentMoniker": "D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\04.DXRTriagnelRework\\DXRTriagnelReworkApp.cpp",
               "RelativeDocumentMoniker": "04.DXRTriagnelRework\\DXRTriagnelReworkApp.cpp",
               "ToolTip": "D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\04.DXRTriagnelRework\\DXRTriagnelReworkApp.cpp*",
               "RelativeToolTip": "04.DXRTriagnelRework\\DXRTriagnelReworkApp.cpp*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAIcAAAAAAAAAAAAAAJgAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-06-10T03:02:07.432Z",
+              "WhenOpened": "2025-06-11T02:08:04.839Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "FloatingWindowState": {
+        "Id": "421a7d9f-198b-4858-9a0c-da1cb2740609",
+        "Display": 0,
+        "X": 1362,
+        "Y": 226,
+        "Width": 1051,
+        "Height": 1044,
+        "WindowState": 0
+      },
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AccelerationStructure.cpp",
+              "DocumentMoniker": "D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTutorial\\AccelerationStructure.cpp",
+              "RelativeDocumentMoniker": "DXRTutorial\\AccelerationStructure.cpp",
+              "ToolTip": "D:\\GitFromSeongU01\\DXRTutorial\\DXRTutorial\\DXRTutorial\\AccelerationStructure.cpp*",
+              "RelativeToolTip": "DXRTutorial\\AccelerationStructure.cpp*",
+              "ViewState": "AgIAAKIAAAAAAAAAAAAmwLsAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-06-12T06:51:16.199Z",
               "EditorCaption": ""
             }
           ]

@@ -10,6 +10,9 @@
     <Filter Include="nv_helpers">
       <UniqueIdentifier>{02267673-1090-43af-8c6c-c34111b9caa4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Include\Struct">
+      <UniqueIdentifier>{131eef0c-02e1-40b0-a06b-040f3005ab61}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Application.cpp">
@@ -40,6 +43,12 @@
       <Filter>nv_helpers</Filter>
     </ClCompile>
     <ClCompile Include="GameTimer.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="AccelerationStructure.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="RTPipeline.cpp">
       <Filter>Source</Filter>
     </ClCompile>
   </ItemGroup>
@@ -87,6 +96,36 @@
       <Filter>nv_helpers</Filter>
     </ClInclude>
     <ClInclude Include="GameTimer.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="AccelerationStructure.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="DxilLibrary.h">
+      <Filter>Include\Struct</Filter>
+    </ClInclude>
+    <ClInclude Include="ExportAssociation.h">
+      <Filter>Include\Struct</Filter>
+    </ClInclude>
+    <ClInclude Include="GlobalRootSignature.h">
+      <Filter>Include\Struct</Filter>
+    </ClInclude>
+    <ClInclude Include="HitProgram.h">
+      <Filter>Include\Struct</Filter>
+    </ClInclude>
+    <ClInclude Include="LocalRootSignature.h">
+      <Filter>Include\Struct</Filter>
+    </ClInclude>
+    <ClInclude Include="PipelineConfig.h">
+      <Filter>Include\Struct</Filter>
+    </ClInclude>
+    <ClInclude Include="ShaderConfig.h">
+      <Filter>Include\Struct</Filter>
+    </ClInclude>
+    <ClInclude Include="RTPipeline.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="dxcapi.use.h">
       <Filter>Include</Filter>
     </ClInclude>
   </ItemGroup>

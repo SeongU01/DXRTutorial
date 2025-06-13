@@ -54,6 +54,7 @@ int Application::Run(DXRSample* pSample, HINSTANCE hInstance, int cmdShow)
 				float delta = _pTimer->DeltaTime();
 				pSample->Update(delta);
 				pSample->Render();
+				pSample->Flip();
 			}
 		}
 	pSample->Finalize();

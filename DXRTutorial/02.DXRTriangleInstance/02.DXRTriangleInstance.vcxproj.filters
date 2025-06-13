@@ -13,12 +13,12 @@
       <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="DXRTriangleInstanceApp.cpp">
-      <Filter>Include</Filter>
+      <Filter>Source</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DXRTriangleInstanceApp.h">
-      <Filter>Source</Filter>
+      <Filter>Include</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

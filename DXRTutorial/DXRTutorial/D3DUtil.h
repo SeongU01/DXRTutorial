@@ -32,64 +32,23 @@
 #include <wrl.h>
 extern const int gNumFrameResources;
 using namespace Microsoft::WRL;
-
-inline void d3dSetDebugName(IDXGIObject* obj, const char* name)
+static const D3D12_HEAP_PROPERTIES UploadHeapProps =
 {
-  if (obj)
-  {
-    obj->SetPrivateData(WKPDID_D3DDebugObjectName, lstrlenA(name), name);
-  }
-}
-inline void d3dSetDebugName(ID3D12Device* obj, const char* name)
-{
-  if (obj)
-  {
-    obj->SetPrivateData(WKPDID_D3DDebugObjectName, lstrlenA(name), name);
-  }
-}
-inline void d3dSetDebugName(ID3D12DeviceChild* obj, const char* name)
-{
-  if (obj)
-  {
-    obj->SetPrivateData(WKPDID_D3DDebugObjectName, lstrlenA(name), name);
-  }
-}
+	D3D12_HEAP_TYPE_UPLOAD,
+	D3D12_CPU_PAGE_PROPERTY_UNKNOWN,
+	D3D12_MEMORY_POOL_UNKNOWN,
+	0,
+	0,
+};
 
-inline std::wstring AnsiToWString(const std::string& str)
+static const D3D12_HEAP_PROPERTIES DefaultHeapProps =
 {
-  WCHAR buffer[512];
-  MultiByteToWideChar(CP_ACP, 0, str.c_str(), -1, buffer, 512);
-  return std::wstring(buffer);
-}
-
-/*
-#if defined(_DEBUG)
-    #ifndef Assert
-    #define Assert(x, description)                                  \
-    {                                                               \
-        static bool ignoreAssert = false;                           \
-        if(!ignoreAssert && !(x))                                   \
-        {                                                           \
-            Debug::AssertResult result = Debug::ShowAssertDialog(   \
-            (L#x), description, AnsiToWString(__FILE__), __LINE__); \
-        if(result == Debug::AssertIgnore)                           \
-        {                                                           \
-            ignoreAssert = true;                                    \
-        }                                                           \
-                    else if(result == Debug::AssertBreak)           \
-        {                                                           \
-            __debugbreak();                                         \
-        }                                                           \
-        }                                                           \
-    }
-    #endif
-#else
-    #ifndef Assert
-    #define Assert(x, description)
-    #endif
-#endif
-    */
-
+	D3D12_HEAP_TYPE_DEFAULT,
+	D3D12_CPU_PAGE_PROPERTY_UNKNOWN,
+	D3D12_MEMORY_POOL_UNKNOWN,
+	0,
+	0
+};
 class d3dUtil
 {
 public:
@@ -122,4 +81,46 @@ public:
     static IDxcBlob* CompileShaderLibrary(LPCWSTR fileName);
 
     static HRESULT UpdateBuffer(const ComPtr<ID3D12Resource>& buffer, void* data, UINT size);
+	static ComPtr<ID3D12RootSignature> CreateRoogSignature(ID3D12Device* pDevice,const D3D12_ROOT_SIGNATURE_DESC& desc);
+	static void WriteShaderTableEntry(
+		uint8_t* pBase, uint32_t entryIndex, uint32_t entrySize,
+		void* pShaderIdentifier, const void* pLocalRootData, size_t localRootSize
+	);
+	static UINT AlignTo(UINT value, UINT alignment);
 };
+
+struct AccelerationStructureBuffers
+{
+    ComPtr<ID3D12Resource> pScratch;
+    ComPtr<ID3D12Resource> pResult;
+    ComPtr<ID3D12Resource> pInstanceDesc;
+};
+
+inline void d3dSetDebugName(IDXGIObject* obj, const char* name)
+{
+	if (obj)
+	{
+		obj->SetPrivateData(WKPDID_D3DDebugObjectName, lstrlenA(name), name);
+	}
+}
+inline void d3dSetDebugName(ID3D12Device* obj, const char* name)
+{
+	if (obj)
+	{
+		obj->SetPrivateData(WKPDID_D3DDebugObjectName, lstrlenA(name), name);
+	}
+}
+inline void d3dSetDebugName(ID3D12DeviceChild* obj, const char* name)
+{
+	if (obj)
+	{
+		obj->SetPrivateData(WKPDID_D3DDebugObjectName, lstrlenA(name), name);
+	}
+}
+
+inline std::wstring AnsiToWString(const std::string& str)
+{
+	WCHAR buffer[512];
+	MultiByteToWideChar(CP_ACP, 0, str.c_str(), -1, buffer, 512);
+	return std::wstring(buffer);
+}

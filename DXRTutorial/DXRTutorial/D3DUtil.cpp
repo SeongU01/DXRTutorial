@@ -1,7 +1,6 @@
 #include "D3DUtil.h"
 #include "Util.h"
 
-
 Microsoft::WRL::ComPtr<ID3D12Resource> d3dUtil::CreateDefaultBuffer(ID3D12Device* device, ID3D12GraphicsCommandList* cmdList, const void* initData, UINT64 byteSize, Microsoft::WRL::ComPtr<ID3D12Resource>& uploadBuffer)
 {
 	ComPtr<ID3D12Resource>  defaultBuffer;
@@ -192,4 +191,47 @@ HRESULT d3dUtil::UpdateBuffer(const ComPtr<ID3D12Resource>& buffer, void* data, 
 	buffer->Unmap(0, nullptr);
 
 	return hr;
+}
+
+ComPtr<ID3D12RootSignature> d3dUtil::CreateRoogSignature(ID3D12Device* pDevice, const D3D12_ROOT_SIGNATURE_DESC& desc)
+{
+	ComPtr<ID3D10Blob> pSigBlob;
+	ComPtr<ID3D10Blob> pErrorBlob;
+	
+	HRESULT hr = D3D12SerializeRootSignature(
+		&desc, D3D_ROOT_SIGNATURE_VERSION_1, &pSigBlob, &pErrorBlob
+	);
+	if (FAILED(hr))
+	{
+		std::string msg(static_cast<const char*>(pErrorBlob->GetBufferPointer()), pErrorBlob->GetBufferSize());
+		OutputDebugStringA(msg.c_str());
+		return nullptr;
+	}
+	
+	ComPtr<ID3D12RootSignature> pRootSig;
+	FAILED_CHECK_BREAK(
+		pDevice->CreateRootSignature(
+			0, pSigBlob->GetBufferPointer(),
+			pSigBlob->GetBufferSize(),
+			IID_PPV_ARGS(pRootSig.GetAddressOf())
+		)
+	);
+	return pRootSig;
+}
+
+void d3dUtil::WriteShaderTableEntry(uint8_t* pBase, uint32_t entryIndex, uint32_t entrySize, void* pShaderIdentifier, const void* pLocalRootData, size_t localRootSize)
+{
+	uint8_t* pEntry = pBase + entryIndex * entrySize;
+	memcpy(pEntry, pShaderIdentifier, D3D12_SHADER_IDENTIFIER_SIZE_IN_BYTES);
+	if (pLocalRootData && localRootSize > 0)
+	{
+		void* pdst = pEntry + D3D12_SHADER_IDENTIFIER_SIZE_IN_BYTES;
+		assert((reinterpret_cast<uint64_t>(pdst) % 8) == 0);
+		memcpy(pdst, pLocalRootData, localRootSize);
+	}
+}
+
+UINT d3dUtil::AlignTo(UINT value, UINT alignment)
+{
+	return (((value + alignment - 1) / alignment ) * alignment);
 }
