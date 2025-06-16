@@ -15,9 +15,21 @@
     <ClCompile Include="DXRTriagnelReworkApp.cpp">
       <Filter>Source</Filter>
     </ClCompile>
+    <ClCompile Include="AccelerationStructure.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="RTPipeline.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DXRTriagnelReworkApp.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="AccelerationStructure.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="RTPipeline.h">
       <Filter>Include</Filter>
     </ClInclude>
   </ItemGroup>

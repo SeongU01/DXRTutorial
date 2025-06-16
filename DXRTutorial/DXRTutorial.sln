@@ -13,6 +13,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "03.DXRTriangleInstanceAnima
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "04.DXRTriagnelRework", "04.DXRTriagnelRework\04.DXRTriagnelRework.vcxproj", "{C2C18D46-C0AC-4547-9681-4E7C9756F8D0}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "05.DXRPrimitiveRendering", "05.DXRPrimitiveRendering\05.DXRPrimitiveRendering.vcxproj", "{2268CC97-FC42-44F0-BD6A-8C9B4C2B406B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -61,6 +63,14 @@ Global
 		{C2C18D46-C0AC-4547-9681-4E7C9756F8D0}.Release|x64.Build.0 = Release|x64
 		{C2C18D46-C0AC-4547-9681-4E7C9756F8D0}.Release|x86.ActiveCfg = Release|Win32
 		{C2C18D46-C0AC-4547-9681-4E7C9756F8D0}.Release|x86.Build.0 = Release|Win32
+		{2268CC97-FC42-44F0-BD6A-8C9B4C2B406B}.Debug|x64.ActiveCfg = Debug|x64
+		{2268CC97-FC42-44F0-BD6A-8C9B4C2B406B}.Debug|x64.Build.0 = Debug|x64
+		{2268CC97-FC42-44F0-BD6A-8C9B4C2B406B}.Debug|x86.ActiveCfg = Debug|Win32
+		{2268CC97-FC42-44F0-BD6A-8C9B4C2B406B}.Debug|x86.Build.0 = Debug|Win32
+		{2268CC97-FC42-44F0-BD6A-8C9B4C2B406B}.Release|x64.ActiveCfg = Release|x64
+		{2268CC97-FC42-44F0-BD6A-8C9B4C2B406B}.Release|x64.Build.0 = Release|x64
+		{2268CC97-FC42-44F0-BD6A-8C9B4C2B406B}.Release|x86.ActiveCfg = Release|Win32
+		{2268CC97-FC42-44F0-BD6A-8C9B4C2B406B}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,449 @@
+#include "DXRPrimitiveApp.h"
+#include "Application.h"
+#include "RTPipeline.h"
+#include "HitProgram.h"
+#include "LocalRootSignature.h"
+#include "ExportAssociation.h"
+#include "ShaderConfig.h"
+#include "PipelineConfig.h"
+#include "GlobalRootSignature.h"
+
+std::vector<ComPtr<ID3D12Resource>> DXRPrimitiveApp::gUploadBuffers{};
+
+DXRPrimitiveApp::DXRPrimitiveApp(UINT width, UINT height, std::wstring name)
+	:DXRSample{ width,height,name }
+{
+	_viewPort.TopLeftX = 0.f;
+	_viewPort.TopLeftY = 0.f;
+	_viewPort.Width = width;
+	_viewPort.Height = height;
+	_viewPort.MinDepth = 0.f;
+	_viewPort.MaxDepth = 1.f;
+	_scissorRect.top = 0;
+	_scissorRect.left = 0;
+	_scissorRect.right = width;
+	_scissorRect.bottom = height;
+}
+
+void DXRPrimitiveApp::Initialize()
+{
+	LoadPipeline();
+	_commandList->Reset(_commandAlloc.Get(), nullptr);
+	CreateAccelerationStructures();
+	CreateRTPipelineState();
+	CreateShaderResource();
+	CreateShaderTable();
+}
+
+void DXRPrimitiveApp::Update(const float& dt)
+{
+}
+
+void DXRPrimitiveApp::Render()
+{
+	_commandAlloc->Reset();
+	_commandList->Reset(_commandAlloc.Get(), nullptr);
+	BeginFrame();
+	auto br = CD3DX12_RESOURCE_BARRIER::Transition(
+		_outputResource.Get(), D3D12_RESOURCE_STATE_COPY_SOURCE,
+		D3D12_RESOURCE_STATE_UNORDERED_ACCESS
+	);
+	_commandList->ResourceBarrier(1, &br);
+	D3D12_DISPATCH_RAYS_DESC raytraceDesc{};
+	raytraceDesc.Width = _width;
+	raytraceDesc.Height = _height;
+	raytraceDesc.Depth = 1;
+	
+	//raygen
+	raytraceDesc.RayGenerationShaderRecord.StartAddress =
+		_shaderTable->GetGPUVirtualAddress() + 0 * _shaderTableEntrySize;
+	raytraceDesc.RayGenerationShaderRecord.SizeInBytes = _shaderTableEntrySize;
+	
+	//miss
+	const size_t missOffset = 1 * _shaderTableEntrySize;
+	raytraceDesc.MissShaderTable.StartAddress = _shaderTable->GetGPUVirtualAddress() + missOffset;
+	raytraceDesc.MissShaderTable.StrideInBytes = _shaderTableEntrySize;
+	raytraceDesc.MissShaderTable.SizeInBytes = _shaderTableEntrySize * 1;
+
+	//hit
+	const size_t hitOffset = 2 * _shaderTableEntrySize;
+	raytraceDesc.HitGroupTable.StartAddress = _shaderTable->GetGPUVirtualAddress() + hitOffset;
+	raytraceDesc.HitGroupTable.StrideInBytes = _shaderTableEntrySize;
+	raytraceDesc.HitGroupTable.SizeInBytes = _shaderTableEntrySize * 1;
+
+	//bind 
+	_commandList->SetComputeRootSignature(_emptyRootsignature.Get());
+
+	ComPtr<ID3D12GraphicsCommandList4> cmdList4;
+	FAILED_CHECK_BREAK(_commandList->QueryInterface(cmdList4.GetAddressOf()));
+
+	cmdList4->SetPipelineState1(_pipelineState.Get());
+	cmdList4->DispatchRays(&raytraceDesc);
+	
+	br = CD3DX12_RESOURCE_BARRIER::Transition(
+		_outputResource.Get(), D3D12_RESOURCE_STATE_UNORDERED_ACCESS,
+		D3D12_RESOURCE_STATE_COPY_SOURCE
+	);
+	_commandList->ResourceBarrier(1, &br);
+
+	br = CD3DX12_RESOURCE_BARRIER::Transition(
+		_renderTargets[_frameIndex].Get(), D3D12_RESOURCE_STATE_PRESENT,
+		D3D12_RESOURCE_STATE_COPY_DEST
+	);
+	_commandList->ResourceBarrier(1, &br);
+	_commandList->CopyResource(_renderTargets[_frameIndex].Get(), _outputResource.Get());
+
+	EndFrame();
+}
+void DXRPrimitiveApp::CheckDebug()
+{
+	_commandList->Close();
+	ID3D12CommandList* commandLists[] = { _commandList.Get() };
+	_commandQueue->ExecuteCommandLists(_countof(commandLists), commandLists);
+	GPUSync();
+	_commandList->Reset(_commandAlloc.Get(), nullptr);
+}
+void DXRPrimitiveApp::Flip()
+{
+	ID3D12CommandList* commandLists[] = { _commandList.Get() };
+	_commandQueue->ExecuteCommandLists(_countof(commandLists), commandLists);
+	_swapChain->Present(0, 0);
+	// 디바이스 제거 사유 확인
+	HRESULT reason = _device->GetDeviceRemovedReason();
+	if (FAILED(reason))
+	{
+		char reasonStr[64];
+		sprintf_s(reasonStr, "DeviceRemovedReason: 0x%08X\n", reason);
+		OutputDebugStringA(reasonStr);
+	}
+
+	GPUSync();
+	gUploadBuffers.clear();
+}
+
+
+void DXRPrimitiveApp::Finalize()
+{
+}
+
+uint32_t DXRPrimitiveApp::BeginFrame()
+{
+	ID3D12DescriptorHeap* heaps[] = { _srvuavHeap.Get() };
+	_commandList->SetDescriptorHeaps(_countof(heaps), heaps);
+	_frameIndex = _swapChain->GetCurrentBackBufferIndex();
+	return _frameIndex;
+}
+
+void DXRPrimitiveApp::EndFrame()
+{
+	auto br = CD3DX12_RESOURCE_BARRIER::Transition(
+		_renderTargets[_frameIndex].Get(), D3D12_RESOURCE_STATE_COPY_DEST, D3D12_RESOURCE_STATE_PRESENT);
+	_commandList->ResourceBarrier(1, &br);
+	_commandList->Close();
+}
+
+void DXRPrimitiveApp::LoadPipeline()
+{
+#ifdef _DEBUG
+	ComPtr<ID3D12Debug> debugController;
+	if (SUCCEEDED(D3D12GetDebugInterface(IID_PPV_ARGS(debugController.GetAddressOf()))))
+	{
+		debugController->EnableDebugLayer();
+	}
+
+	//ComPtr<ID3D12Debug1> debugController1;
+	//if (SUCCEEDED(debugController->QueryInterface(IID_PPV_ARGS(&debugController1))))
+	//{
+	//	debugController1->SetEnableGPUBasedValidation(TRUE); // GPU 기반 유효성 검사 (선택)
+	//	debugController1->SetEnableSynchronizedCommandQueueValidation(TRUE); // 명령 큐 동기화 검사 (선택)
+	//}
+
+	//ComPtr<ID3D12DeviceRemovedExtendedDataSettings> dredSettings;
+	//if (SUCCEEDED(D3D12GetDebugInterface(IID_PPV_ARGS(&dredSettings))))
+	//{
+	//	dredSettings->SetAutoBreadcrumbsEnablement(D3D12_DRED_ENABLEMENT_FORCED_ON);
+	//	dredSettings->SetPageFaultEnablement(D3D12_DRED_ENABLEMENT_FORCED_ON);
+	//}
+#endif
+	auto hwnd = Application::GetHwnd();
+	assert(hwnd != nullptr); // 디버그 시 꼭 확인해보세요
+	CreateDXRDeviceAndSwapChain(hwnd, D3D_FEATURE_LEVEL_12_1);
+	CreateRTVHeapAndRTV();
+}
+
+void DXRPrimitiveApp::CreateDXRDeviceAndSwapChain(HWND hwnd, D3D_FEATURE_LEVEL feature)
+{
+	ComPtr<IDXGIFactory4> factory;
+	UINT flags = 0;
+#ifdef _DEBUG
+	flags |= DXGI_CREATE_FACTORY_DEBUG;
+#endif //  _DEBUG
+	FAILED_CHECK_BREAK(CreateDXGIFactory2(flags, IID_PPV_ARGS(factory.GetAddressOf())));
+	ComPtr<IDXGIAdapter1> hardwareAdapter;
+	GetHardwareAdapter(factory.Get(), hardwareAdapter.GetAddressOf());
+
+	FAILED_CHECK_BREAK(D3D12CreateDevice(hardwareAdapter.Get(),
+		D3D_FEATURE_LEVEL_12_1,
+		IID_PPV_ARGS(_device.GetAddressOf())));
+
+	DXGI_SWAP_CHAIN_DESC1 swapChainDesc{};
+	swapChainDesc.BufferCount = _frameCount;
+	swapChainDesc.Width = _width;
+	swapChainDesc.Height = _height;
+	swapChainDesc.Format = DXGI_FORMAT_R8G8B8A8_UNORM;
+	swapChainDesc.BufferUsage = DXGI_USAGE_RENDER_TARGET_OUTPUT;
+	swapChainDesc.SwapEffect = DXGI_SWAP_EFFECT_FLIP_DISCARD;
+	swapChainDesc.SampleDesc.Count = 1;
+	swapChainDesc.SampleDesc.Quality = 0;
+
+	CreateCommandObject();
+	CreateSyncObject();
+	_swapChain.Reset();
+
+	ComPtr<IDXGISwapChain1> swapChain;
+	FAILED_CHECK_BREAK(factory->CreateSwapChainForHwnd(
+		_commandQueue.Get(),
+		hwnd, &swapChainDesc, nullptr, nullptr,
+		swapChain.GetAddressOf()));
+	FAILED_CHECK_BREAK(swapChain->QueryInterface(IID_PPV_ARGS(_swapChain.GetAddressOf())));
+	_frameIndex = _swapChain->GetCurrentBackBufferIndex();
+}
+
+void DXRPrimitiveApp::CreateCommandObject()
+{
+	D3D12_COMMAND_QUEUE_DESC desc
+	{
+		.Type = D3D12_COMMAND_LIST_TYPE_DIRECT,
+		.Priority = D3D12_COMMAND_QUEUE_PRIORITY_NORMAL,
+		.Flags = D3D12_COMMAND_QUEUE_FLAG_NONE,
+		.NodeMask = 0,
+	};
+
+	FAILED_CHECK_BREAK(_device->CreateCommandQueue(&desc, IID_PPV_ARGS(_commandQueue.GetAddressOf())));
+	FAILED_CHECK_BREAK(_device->CreateCommandAllocator(desc.Type, IID_PPV_ARGS(_commandAlloc.GetAddressOf())));
+	FAILED_CHECK_BREAK(_device->CreateCommandList(desc.NodeMask, desc.Type, _commandAlloc.Get(), nullptr,
+		IID_PPV_ARGS(_commandList.GetAddressOf())));
+	_commandList->Close();
+}
+
+void DXRPrimitiveApp::CreateSyncObject()
+{
+	HRESULT hr = _device->CreateFence(0, D3D12_FENCE_FLAG_NONE, IID_PPV_ARGS(_fence.GetAddressOf()));
+	_fenceValue = 1;
+	_fenceEvent = CreateEvent(NULL, FALSE, FALSE, NULL);
+	if (FAILED(hr) || NULL == _fenceEvent)
+		__debugbreak();
+}
+
+void DXRPrimitiveApp::CreateRTVHeapAndRTV()
+{
+	D3D12_DESCRIPTOR_HEAP_DESC heapDesc
+	{
+		.Type = D3D12_DESCRIPTOR_HEAP_TYPE_RTV,
+		.NumDescriptors = _frameCount,
+		.Flags = D3D12_DESCRIPTOR_HEAP_FLAG_NONE
+	};
+	FAILED_CHECK_BREAK(_device->CreateDescriptorHeap(&heapDesc, IID_PPV_ARGS(_rtvHeap.GetAddressOf())));
+	_rtvDescriptorSize = _device->GetDescriptorHandleIncrementSize(D3D12_DESCRIPTOR_HEAP_TYPE_RTV);
+	D3D12_CPU_DESCRIPTOR_HANDLE rtvHandle = _rtvHeap->GetCPUDescriptorHandleForHeapStart();
+	for (UINT i = 0; i < _frameCount; ++i)
+	{
+		FAILED_CHECK_BREAK(_swapChain->GetBuffer(i, IID_PPV_ARGS(_renderTargets[i].GetAddressOf())));
+		_device->CreateRenderTargetView(_renderTargets[i].Get(), nullptr, rtvHandle);
+		rtvHandle.ptr += _rtvDescriptorSize;
+	}
+}
+
+void DXRPrimitiveApp::GPUSync()
+{
+	const UINT64 fence = _fenceValue;
+	_commandQueue->Signal(_fence.Get(), fence);
+	_fenceValue++;
+	if (_fence->GetCompletedValue() < fence)
+	{
+		_fence->SetEventOnCompletion(fence, _fenceEvent);
+		::WaitForSingleObject(_fenceEvent, INFINITE);
+	}
+}
+
+void DXRPrimitiveApp::CheckDXRSupport() const
+{
+	D3D12_FEATURE_DATA_D3D12_OPTIONS5 options5{};
+	FAILED_CHECK_BREAK(_device->CheckFeatureSupport(D3D12_FEATURE_D3D12_OPTIONS5, &options5, sizeof(options5)));
+	if (options5.RaytracingTier < D3D12_RAYTRACING_TIER_1_0)
+		throw std::runtime_error("DXR not supported on this device");
+}
+
+void DXRPrimitiveApp::CreateAccelerationStructures()
+{
+	const AccelerationStructureBuffers bottomLevelBuffer =
+		AccelerationStructure::CreateBottomLevelAS(_device, _commandList,_resources);
+
+	_bottomLevelAS = bottomLevelBuffer.pResult;
+	AccelerationStructure::BuiltTopLevelAS(_device, _commandList, _bottomLevelAS, _tlasSize, _topLevelBuffers);
+	
+	FAILED_CHECK_BREAK(_commandList->Close());
+	ID3D12CommandList* ppCommandList[] = { _commandList.Get() };
+	_commandQueue->ExecuteCommandLists(_countof(ppCommandList), ppCommandList);
+	GPUSync();
+	_commandAlloc->Reset();
+	_commandList->Reset(_commandAlloc.Get(),nullptr);
+}
+
+void DXRPrimitiveApp::CreateRTPipelineState()
+{
+	// Need 16 subobjects:
+	// 1 for the dxil library
+	// 1 for hit-group
+	// 2 for raygen root-signature
+	// 2 for the root-signature shared between miss and hit shaders
+	// 2 for shader config
+	// 1 for pipeline config
+	// 1 for the global root signature
+	std::array<D3D12_STATE_SUBOBJECT, 10> subobjects{};
+	uint32_t index = 0;
+	
+	DxilLibrary dxilLib = RTPipeline::CreateDxilLibrary();
+	subobjects[index++] = dxilLib.stateSubobject; // 0 library
+	
+	HitProgram hitProgram(nullptr, RTPipeline::ClosestHitShader, RTPipeline::HitGroup);
+	subobjects[index++] = hitProgram.subObject; // 1 hit group
+	
+	LocalRootSignature rgRootSignature(_device, RTPipeline::CreateRayGenRootDesc().desc);
+	subobjects[index] = rgRootSignature.subObject; // 2 raygen desc
+
+	uint32_t rgsRootIndex = index++;
+	ExportAssociation rgsRootAssociation(&RTPipeline::RayGenShader, 1, &(subobjects[rgsRootIndex]));
+	subobjects[index++] = rgsRootAssociation.subObject; // 3 associate root sig to rgs
+	
+	D3D12_ROOT_SIGNATURE_DESC emptyDesc{};
+	emptyDesc.Flags = D3D12_ROOT_SIGNATURE_FLAG_LOCAL_ROOT_SIGNATURE;
+	LocalRootSignature hitMissRootSignature(_device, emptyDesc);
+	subobjects[index] = hitMissRootSignature.subObject; // 4 root sig to be shared betwenn miss and hit
+
+	uint32_t hitMissRootIndex = index++;
+	const WCHAR* missHitExportName[] = {
+		RTPipeline::MissShader,RTPipeline::ClosestHitShader
+	};
+	ExportAssociation missHitMissAssociation(missHitExportName, 
+		_countof(missHitExportName), &(subobjects[hitMissRootIndex])); 
+	subobjects[index++] = missHitMissAssociation.subObject; // 5 associate root sig to miss and chs
+
+	ShaderConfig primaryShaderConfig(sizeof(float) * 2, sizeof(float) * 4);
+	subobjects[index] = primaryShaderConfig.subobject; // 6 shader config
+
+	uint32_t primaryShaderConfigIndex = index++;
+	const WCHAR* primaryShaderExports[] = {
+		RTPipeline::MissShader,
+		RTPipeline::ClosestHitShader,
+		RTPipeline::RayGenShader
+	};
+	ExportAssociation primaryConfigAssociation(
+		primaryShaderExports,
+		_countof(primaryShaderExports),
+		&(subobjects[primaryShaderConfigIndex])
+	);
+	subobjects[index++] = primaryConfigAssociation.subObject; // 7 associate shader config to miss, chs, rgs
+
+	PipelineConfig config(1);
+	subobjects[index++] = config.subObject;// 8
+
+	GlobalRootSignature root(_device, {});
+	_emptyRootsignature = root.rootSingnature;
+	subobjects[index++] = root.subObject; // 9 
+
+	D3D12_STATE_OBJECT_DESC desc{};
+	desc.NumSubobjects = index;
+	desc.pSubobjects = subobjects.data();
+	desc.Type = D3D12_STATE_OBJECT_TYPE_RAYTRACING_PIPELINE;
+	ComPtr<ID3D12Device5> device5;
+	_device->QueryInterface(IID_PPV_ARGS(device5.GetAddressOf()));
+	FAILED_CHECK_BREAK(device5->CreateStateObject(&desc, IID_PPV_ARGS(_pipelineState.GetAddressOf())));
+}
+
+void DXRPrimitiveApp::CreateShaderTable()
+{
+	/*
+	* entry 0 - ray-gen program
+	* entry 1 - miss program
+	* entry 2 - hit program
+	*/
+	_shaderTableEntrySize = D3D12_SHADER_IDENTIFIER_SIZE_IN_BYTES;
+	_shaderTableEntrySize += 8;
+	_shaderTableEntrySize = d3dUtil::AlignTo(_shaderTableEntrySize, D3D12_RAYTRACING_SHADER_RECORD_BYTE_ALIGNMENT);
+	const uint32_t shaderTableSize = _shaderTableEntrySize * 3;
+
+	d3dUtil::CreateUploadBuffer(
+		shaderTableSize,
+		D3D12_RESOURCE_FLAG_NONE,
+		D3D12_RESOURCE_STATE_GENERIC_READ,
+		_shaderTable,
+		_device.Get()
+	);
+
+	uint8_t* pData;
+	FAILED_CHECK_BREAK(_shaderTable->Map(0, nullptr, reinterpret_cast<void**>(&pData)));
+	ComPtr<ID3D12StateObjectProperties> pRtsoProps;
+	_pipelineState->QueryInterface(IID_PPV_ARGS(pRtsoProps.GetAddressOf()));
+
+	// 0 ray gen program
+	memcpy(pData, pRtsoProps->GetShaderIdentifier(RTPipeline::RayGenShader),D3D12_SHADER_IDENTIFIER_SIZE_IN_BYTES);
+	const uint64_t heapStart = _srvuavHeap->GetGPUDescriptorHandleForHeapStart().ptr;
+	*reinterpret_cast<uint64_t*>(pData + D3D12_SHADER_IDENTIFIER_SIZE_IN_BYTES) = heapStart;
+
+	// 1 primary ray miss
+	pData += _shaderTableEntrySize;
+	memcpy(pData, pRtsoProps->GetShaderIdentifier(RTPipeline::MissShader), D3D12_SHADER_IDENTIFIER_SIZE_IN_BYTES);
+	
+	// 2 hit program
+	pData += _shaderTableEntrySize;
+	memcpy(pData, pRtsoProps->GetShaderIdentifier(RTPipeline::HitGroup), D3D12_SHADER_IDENTIFIER_SIZE_IN_BYTES);
+	
+	_shaderTable->Unmap(0, nullptr);
+}
+
+void DXRPrimitiveApp::CreateShaderResource()
+{
+	D3D12_RESOURCE_DESC resDesc{};
+	resDesc.DepthOrArraySize = 1;
+	resDesc.Dimension = D3D12_RESOURCE_DIMENSION_TEXTURE2D;
+	resDesc.Format = DXGI_FORMAT_R8G8B8A8_UNORM;
+	resDesc.Flags = D3D12_RESOURCE_FLAG_ALLOW_UNORDERED_ACCESS;
+	resDesc.Width = _width;
+	resDesc.Height = _height;
+	resDesc.Layout = D3D12_TEXTURE_LAYOUT_UNKNOWN;
+	resDesc.MipLevels = 1;
+	resDesc.SampleDesc.Count = 1;
+	FAILED_CHECK_BREAK(
+		_device->CreateCommittedResource(
+			&DefaultHeapProps,
+			D3D12_HEAP_FLAG_NONE,
+			&resDesc,
+			D3D12_RESOURCE_STATE_COPY_SOURCE,
+			nullptr,
+			IID_PPV_ARGS(_outputResource.GetAddressOf())
+		)
+	);
+	D3D12_DESCRIPTOR_HEAP_DESC heapDesc{};
+	heapDesc.NumDescriptors = 2;
+	heapDesc.Flags = D3D12_DESCRIPTOR_HEAP_FLAG_SHADER_VISIBLE;
+	heapDesc.Type = D3D12_DESCRIPTOR_HEAP_TYPE_CBV_SRV_UAV;
+	_device->CreateDescriptorHeap(&heapDesc, IID_PPV_ARGS(_srvuavHeap.GetAddressOf()));
+
+	D3D12_UNORDERED_ACCESS_VIEW_DESC uavDesc{};
+	uavDesc.ViewDimension = D3D12_UAV_DIMENSION_TEXTURE2D;
+	_device->CreateUnorderedAccessView(
+		_outputResource.Get(),
+		nullptr,
+		&uavDesc,
+		_srvuavHeap->GetCPUDescriptorHandleForHeapStart()
+	);
+
+	D3D12_SHADER_RESOURCE_VIEW_DESC srvDesc{};
+	srvDesc.ViewDimension = D3D12_SRV_DIMENSION_RAYTRACING_ACCELERATION_STRUCTURE;
+	srvDesc.Shader4ComponentMapping = D3D12_DEFAULT_SHADER_4_COMPONENT_MAPPING;
+	srvDesc.RaytracingAccelerationStructure.Location = _topLevelBuffers.pResult->GetGPUVirtualAddress();
+	D3D12_CPU_DESCRIPTOR_HANDLE srvHandle = _srvuavHeap->GetCPUDescriptorHandleForHeapStart();
+	srvHandle.ptr += _device->GetDescriptorHandleIncrementSize(D3D12_DESCRIPTOR_HEAP_TYPE_CBV_SRV_UAV);
+	_device->CreateShaderResourceView(nullptr, &srvDesc, srvHandle);
+}

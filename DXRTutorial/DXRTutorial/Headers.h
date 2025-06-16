@@ -10,6 +10,8 @@
 #include <wrl.h>
 #include <fstream>
 #include <sstream>
+#include <memory>
+
 #include "dxcapi.use.h"
 
 #include "D3DUtil.h"
@@ -21,6 +23,5 @@
 
 using namespace Microsoft::WRL;
 using namespace DirectX::SimpleMath;
-
 
 #include "Util.h"

@@ -45,10 +45,7 @@
     <ClCompile Include="GameTimer.cpp">
       <Filter>Source</Filter>
     </ClCompile>
-    <ClCompile Include="AccelerationStructure.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="RTPipeline.cpp">
+    <ClCompile Include="Primitive.cpp">
       <Filter>Source</Filter>
     </ClCompile>
   </ItemGroup>
@@ -98,9 +95,6 @@
     <ClInclude Include="GameTimer.h">
       <Filter>Include</Filter>
     </ClInclude>
-    <ClInclude Include="AccelerationStructure.h">
-      <Filter>Include</Filter>
-    </ClInclude>
     <ClInclude Include="DxilLibrary.h">
       <Filter>Include\Struct</Filter>
     </ClInclude>
@@ -122,10 +116,13 @@
     <ClInclude Include="ShaderConfig.h">
       <Filter>Include\Struct</Filter>
     </ClInclude>
-    <ClInclude Include="RTPipeline.h">
+    <ClInclude Include="dxcapi.use.h">
       <Filter>Include</Filter>
     </ClInclude>
-    <ClInclude Include="dxcapi.use.h">
+    <ClInclude Include="VertexPositionNormalTangentTexture.h">
+      <Filter>Include\Struct</Filter>
+    </ClInclude>
+    <ClInclude Include="Primitive.h">
       <Filter>Include</Filter>
     </ClInclude>
   </ItemGroup>

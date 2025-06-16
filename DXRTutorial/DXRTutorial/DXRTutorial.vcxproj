@@ -19,7 +19,6 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="AccelerationStructure.cpp" />
     <ClCompile Include="Application.cpp" />
     <ClCompile Include="DXRSample.cpp" />
     <ClCompile Include="D3DUtil.cpp" />
@@ -29,11 +28,10 @@
     <ClCompile Include="nv_helpers_dx12\RootSignatureGenerator.cpp" />
     <ClCompile Include="nv_helpers_dx12\ShaderBindingTableGenerator.cpp" />
     <ClCompile Include="nv_helpers_dx12\TopLevelASGenerator.cpp" />
-    <ClCompile Include="RTPipeline.cpp" />
+    <ClCompile Include="Primitive.cpp" />
     <ClCompile Include="Util.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AccelerationStructure.h" />
     <ClInclude Include="Application.h" />
     <ClInclude Include="D3DUtil.h" />
     <ClInclude Include="d3dx12.h" />
@@ -55,9 +53,10 @@
     <ClInclude Include="nv_helpers_dx12\ShaderBindingTableGenerator.h" />
     <ClInclude Include="nv_helpers_dx12\TopLevelASGenerator.h" />
     <ClInclude Include="PipelineConfig.h" />
-    <ClInclude Include="RTPipeline.h" />
+    <ClInclude Include="Primitive.h" />
     <ClInclude Include="ShaderConfig.h" />
     <ClInclude Include="Util.h" />
+    <ClInclude Include="VertexPositionNormalTangentTexture.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

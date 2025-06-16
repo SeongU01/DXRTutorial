@@ -24,11 +24,15 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="AccelerationStructure.cpp" />
     <ClCompile Include="DXRTriagnelReworkApp.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="RTPipeline.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AccelerationStructure.h" />
     <ClInclude Include="DXRTriagnelReworkApp.h" />
+    <ClInclude Include="RTPipeline.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
