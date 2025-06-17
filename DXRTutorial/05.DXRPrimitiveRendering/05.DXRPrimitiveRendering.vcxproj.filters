@@ -12,24 +12,24 @@
     <ClCompile Include="main.cpp">
       <Filter>Source</Filter>
     </ClCompile>
-    <ClCompile Include="DXRPrimitiveApp.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
     <ClCompile Include="AccelerationStructure.cpp">
       <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="RTPipeline.cpp">
       <Filter>Source</Filter>
     </ClCompile>
+    <ClCompile Include="DXRPrimitiveApp.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="DXRPrimitiveApp.h">
-      <Filter>Include</Filter>
-    </ClInclude>
     <ClInclude Include="AccelerationStructure.h">
       <Filter>Include</Filter>
     </ClInclude>
     <ClInclude Include="RTPipeline.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="DXRPrimitiveApp.h">
       <Filter>Include</Filter>
     </ClInclude>
   </ItemGroup>

@@ -38,23 +38,23 @@ Primitive::Shape Primitive::CreateSphere(float diameter, int tessellation,
 	v = uvVerticalFlip ? 0 : 1;
 	for (int i = 0; i < verticalSegments - 1; i++)
 	{
-		const float latitude = (((i + 1) * static_cast<float>(DirectX::XM_PI)) 
-			/ verticalSegments) - static_cast<float>(DirectX::XM_PI) / 2;
+		const float latitude = (((i + 1) * DirectX::XM_PI) 
+			/ verticalSegments) - (DirectX::XM_PI / 2);
 		u = uvHorizontalFlip ? 0 : 1;
 		v += vIncrement;
-		const float dy = static_cast<float>(sin(latitude));
-		const float dxz = static_cast<float>(cos(latitude));
+		const float dy = sin(latitude);
+		const float dxz = cos(latitude);
 
 		// Create a single ring of vertices at this latitude.
 		for (int j = 0; j <= horizontalSegments; j++)
 		{
-			const float longitude = j * static_cast<float>(DirectX::XM_PI) * 2 / horizontalSegments;
+			const float longitude = j * DirectX::XM_PI * 2 / horizontalSegments;
 
-			const float dx = static_cast<float>(cos(longitude)) * dxz;
-			const float dz = static_cast<float>(sin(longitude)) * dxz;
+			const float dx = cos(longitude) * dxz;
+			const float dz = sin(longitude) * dxz;
 
-			const Vector3 normal(dx, dy, dz);
-
+			Vector3 normal(dx, dy, dz);
+			normal.Normalize();
 			const Vector2 texCoord(u, v);
 			u += uIncrement;
 
