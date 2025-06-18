@@ -400,62 +400,6 @@ void DXRLightingApp::CreateShaderTable()
 	_shaderTable->Unmap(0, nullptr);
 }
 
-
-//void DXRLightingApp::CreateShaderTable()
-//{
-//	/** The shader-table layout is as follows:
-//		Entry 0 - Ray-gen program
-//		Entry 1 - Miss program
-//		Entry 2 - Hit program
-//		All entries in the shader-table must have the same size, so we will choose it base on the largest required entry.
-//		The ray-gen program requires the largest entry - sizeof(program identifier) + 8 bytes for a descriptor-table.
-//		The entry size must be aligned up to D3D12_RAYTRACING_SHADER_RECORD_BYTE_ALIGNMENT
-//	*/
-//
-//	// Calculate the size and create the buffer
-//	_shaderTableEntrySize = D3D12_SHADER_IDENTIFIER_SIZE_IN_BYTES;
-//	_shaderTableEntrySize += 8; // The hit shader constant-buffer descriptor
-//	_shaderTableEntrySize = d3dUtil::AlignTo(_shaderTableEntrySize, D3D12_RAYTRACING_SHADER_RECORD_BYTE_ALIGNMENT);
-//	const uint32_t shaderTableSize = _shaderTableEntrySize * 3;
-//
-//	// For simplicity, we create the shader-table on the upload heap. You can also create it on the default heap
-//	d3dUtil::CreateUploadBuffer(
-//		shaderTableSize,
-//		D3D12_RESOURCE_FLAG_NONE,
-//		D3D12_RESOURCE_STATE_GENERIC_READ,
-//		_shaderTable,
-//		_device.Get()
-//	);
-//
-//	// Map the buffer
-//	uint8_t* pData;
-//	FAILED_CHECK_BREAK(_shaderTable->Map(0, nullptr, reinterpret_cast<void**>(&pData)));
-//
-//	ComPtr<ID3D12StateObjectProperties>pRtsoProps;
-//	_pipelineState->QueryInterface(IID_PPV_ARGS(pRtsoProps.GetAddressOf()));
-//
-//	// Entry 0 - ray-gen program ID and descriptor data
-//	memcpy(pData, pRtsoProps->GetShaderIdentifier(RTPipeline::RayGenShader),
-//		D3D12_SHADER_IDENTIFIER_SIZE_IN_BYTES);
-//	const uint64_t heapStart = _srvuavHeap->GetGPUDescriptorHandleForHeapStart().ptr;
-//	*reinterpret_cast<uint64_t*>(pData + D3D12_SHADER_IDENTIFIER_SIZE_IN_BYTES) = heapStart;
-//
-//	// Entry 1 - primary ray miss
-//	pData += _shaderTableEntrySize;
-//	memcpy(pData, pRtsoProps->GetShaderIdentifier(RTPipeline::MissShader),
-//		D3D12_SHADER_IDENTIFIER_SIZE_IN_BYTES);
-//
-//	// Entry 2 - hit program
-//	pData += _shaderTableEntrySize;
-//	memcpy(pData, pRtsoProps->GetShaderIdentifier(RTPipeline::HitGroup),
-//		D3D12_SHADER_IDENTIFIER_SIZE_IN_BYTES);
-//	const uint64_t heapStartHit = _srvuavHeap->GetGPUDescriptorHandleForHeapStart().ptr;
-//	*reinterpret_cast<uint64_t*>(pData + D3D12_SHADER_IDENTIFIER_SIZE_IN_BYTES) = heapStartHit;
-//
-//	// Unmap
-//	_shaderTable->Unmap(0, nullptr);
-//}
-
 void DXRLightingApp::CreateShaderResource()
 {
 	D3D12_RESOURCE_DESC resDesc{};

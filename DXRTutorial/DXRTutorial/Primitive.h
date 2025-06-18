@@ -16,6 +16,9 @@ public:
 
 	static Shape CreateCube(float size, bool uvHorizontalFlip = false, bool uvVerticalFlip = false,
 		float uTileFactor = 1, float vTileFactor = 1);
+	
+	static Shape CreateQuad(int size, bool uvHorizontalFlip = false, bool uvVerticalFlip = false,
+		float uTileFactor = 1, float vTileFactor = 1);
 private:
 	static void CalculateTangentSpace(Shape& shape);
 };

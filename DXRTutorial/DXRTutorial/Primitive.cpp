@@ -319,3 +319,37 @@ void Primitive::CalculateTangentSpace(Shape& shape)
 		shape.vertexData[a] = vertex;
 	}
 }
+
+
+Primitive::Shape Primitive::CreateQuad(const int size,
+	const bool uvHorizontalFlip,
+	const bool uvVerticalFlip,
+	const float uTileFactor,
+	const float vTileFactor)
+{
+	Shape returnSphereInfo;
+
+	returnSphereInfo.vertexData =
+	{
+		VertexPositionNormalTangentTexture(Vector3(-size, 0, -size),
+													Vector3(0, 1, 0),
+													Vector3(0,0,0),
+													Vector2(0,0)),
+		VertexPositionNormalTangentTexture(Vector3(size, 0, -size),
+													Vector3(0, 1, 0),
+													Vector3(0,0,0),
+													Vector2(0,0)),
+		VertexPositionNormalTangentTexture(Vector3(size, 0, size),
+													Vector3(0, 1, 0),
+													Vector3(0,0,0),
+													Vector2(0,0)),
+		VertexPositionNormalTangentTexture(Vector3(-size, 0, size),
+													Vector3(0, 1, 0),
+													Vector3(0,0,0),
+													Vector2(0,0)),
+	};
+
+	returnSphereInfo.indexData = { 0, 1, 2, 0, 2, 3 };
+
+	return returnSphereInfo;
+}
